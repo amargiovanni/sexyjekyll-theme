@@ -43,7 +43,7 @@ This theme does not include a built-in comments system. However, there are sever
 
 3. Include in `_layouts/post.html`:
 ```liquid
-{% include comments.html %}
+{% raw %}{% include comments.html %}{% endraw %}
 ```
 
 **More info**: https://utteranc.es/
@@ -136,9 +136,9 @@ If you implement a comment system, you can disable it per-post:
 
 1. Modify `_layouts/post.html`:
 ```liquid
-{% unless page.comments == false %}
+{% raw %}{% unless page.comments == false %}
   {% include comments.html %}
-{% endunless %}
+{% endunless %}{% endraw %}
 ```
 
 2. In post front matter:

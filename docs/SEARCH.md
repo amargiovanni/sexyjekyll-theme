@@ -152,7 +152,7 @@ limit: 10  // Show max 10 results instead of 20
 
 Example - Add tags:
 ```liquid
-"tags": "{{ post.tags | join: ', ' }}",
+{% raw %}"tags": "{{ post.tags | join: ', ' }}",{% endraw %}
 ```
 
 ### Customize Result Template
