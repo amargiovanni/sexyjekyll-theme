@@ -1,0 +1,101 @@
+---
+layout: default
+---
+{% assign t = site.data.i18n[site.lang] %}
+<main id="main-content">
+<section class="blog-section">
+    <div class="blog-container">
+        <div class="blog-header">
+            <h1 class="section-title">{{ site.blog.title }}</h1>
+            <p class="blog-description">
+                {{ site.blog.description }}
+            </p>
+        </div>
+
+        <!-- Search Box -->
+        <div class="search-container">
+            <div class="search-wrapper">
+                <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <path d="m21 21-4.35-4.35"></path>
+                </svg>
+                <input type="search" id="search-input" class="search-input" placeholder="{{ t.blog.search_placeholder }}" aria-label="{{ t.blog.search_aria_label }}">
+                <button type="button" id="search-clear" class="search-clear" aria-label="{{ t.blog.clear_search }}" style="display: none;">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            <div id="search-results-count" class="search-results-count" style="display: none;"></div>
+        </div>
+
+        <!-- Search Results (hidden by default) -->
+        <div id="search-results" class="blog-posts search-results" style="display: none;"></div>
+
+        <!-- Regular Posts -->
+        <div id="regular-posts" class="blog-posts">
+            {% for post in paginator.posts %}
+            <article class="blog-post-card">
+                <div class="post-card-content">
+                    <time class="post-date" datetime="{{ post.date | date_to_xmlschema }}">
+                        {{ post.date | localized_date }}
+                    </time>
+                    <h2 class="post-card-title">
+                        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+                    </h2>
+                    {% if post.excerpt %}
+                    <p class="post-card-excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+                    {% endif %}
+                    <div class="post-card-footer">
+                        {% if post.categories %}
+                        <div class="post-categories">
+                            {% for category in post.categories %}
+                            <a href="{{ '/categories/' | append: category | relative_url }}" class="post-category">{{ category }}</a>
+                            {% endfor %}
+                        </div>
+                        {% endif %}
+                        <a href="{{ post.url | relative_url }}" class="read-more">
+                            {{ t.blog.read_more }}
+                        </a>
+                    </div>
+                </div>
+            </article>
+            {% endfor %}
+        </div>
+
+        <!-- Pagination (hidden during search) -->
+        {% if paginator.total_pages > 1 %}
+        <div id="pagination" class="pagination">
+            {% if paginator.previous_page %}
+            <a href="{{ paginator.previous_page_path | relative_url }}" class="pagination-link pagination-prev">
+                {{ t.blog.previous }}
+            </a>
+            {% else %}
+            <span class="pagination-link pagination-prev disabled">{{ t.blog.previous }}</span>
+            {% endif %}
+
+            <div class="pagination-pages">
+                {% for page in (1..paginator.total_pages) %}
+                {% if page == paginator.page %}
+                <span class="pagination-link pagination-current">{{ page }}</span>
+                {% elsif page == 1 %}
+                <a href="{{ '/blog/' | relative_url }}" class="pagination-link">{{ page }}</a>
+                {% else %}
+                <a href="{{ site.paginate_path | relative_url | replace: ':num', page }}" class="pagination-link">{{ page }}</a>
+                {% endif %}
+                {% endfor %}
+            </div>
+
+            {% if paginator.next_page %}
+            <a href="{{ paginator.next_page_path | relative_url }}" class="pagination-link pagination-next">
+                {{ t.blog.next }}
+            </a>
+            {% else %}
+            <span class="pagination-link pagination-next disabled">{{ t.blog.next }}</span>
+            {% endif %}
+        </div>
+        {% endif %}
+    </div>
+</section>
+</main>

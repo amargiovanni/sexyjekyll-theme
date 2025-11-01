@@ -1,0 +1,26 @@
+---
+layout: default
+---
+
+<!-- Contact Section -->
+<main id="main-content">
+<section class="contact">
+    <div class="contact-container">
+        <div class="contact-content">
+            <h1 class="section-title">{{ site.contact.title }}</h1>
+            <p class="contact-description">
+                {{ site.contact.description }}
+            </p>
+
+            <div class="contact-links">
+                {% for link in site.contact.links %}
+                <a href="{{ link.url }}" class="contact-link" target="_blank" rel="noopener noreferrer">
+                    {% include social-icon.html type=link.type %}
+                    <span>{{ link.name }}</span>
+                </a>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+</main>

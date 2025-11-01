@@ -1,0 +1,155 @@
+# Andrea Margiovanni - Technology Leadership & Digital Innovation
+
+> Head of Technology Solutions @ Oltrematica
+> Turning ideas into digital products that make a difference
+
+## About
+
+Andrea Margiovanni is a technology leader specializing in digital product development,
+team management, and technological innovation. Based in Italy, he leads technology
+solutions at Oltrematica, focusing on transforming ideas into impactful digital products.
+
+## Core Expertise
+
+- Digital Product Development & Strategy
+- Technology Leadership & Team Management
+- User Experience & Human-Centered Design
+- Clean Code & Software Architecture
+- Digital Transformation (Public & Private Sector)
+- Agile Development & Continuous Improvement
+- Privacy & Security Best Practices
+- Remote Work & Distributed Teams
+
+## Contact
+
+- Email: hello@margiovanni.it
+- Website: https://margiovanni.it
+- LinkedIn: https://www.linkedin.com/in/margio/
+- Bluesky: https://bsky.app/profile/margio.uk
+
+## Key Content Areas
+
+### Technology & Development
+- Clean code principles and best practices
+- Choosing the right technologies for projects
+- Balancing innovation with simplicity
+- From business vision to technical execution
+- Common product development mistakes to avoid
+
+### Leadership & Teams
+- Managing development teams effectively
+- Designer-developer collaboration
+- Motivation and creativity in tech teams
+- Professional maturity in remote work
+- Building vulnerability-driven stronger teams
+- The evolution from specialist to horizontal profiles
+
+### User Experience & Design
+- Importance of human-centered design
+- Strategies for simple, intuitive user experiences
+- Usability testing and its critical role
+- User feedback for continuous improvement
+
+### Digital Transformation
+- Digital transformation in public services
+- Technology trends shaping 2025
+- Privacy and security best practices
+- Using data to improve products
+
+### AI & Society
+- The Flattery Algorithm: AI and digital isolation
+- Ethical implications of AI-driven personalization
+- Critical thinking in the age of AI
+
+### Security & Innovation
+- Security perspectives from NoHat 2025
+- Balancing security with innovation
+- Modern approaches to cybersecurity
+
+## Recent Insights
+
+**On AI & Critical Thinking**: Andrea explores how AI recommendation systems
+create echo chambers and the importance of maintaining critical thinking in
+an increasingly AI-mediated world.
+
+**On Team Building**: Emphasizes vulnerability as a strength in tech leadership,
+promoting authentic leadership and psychological safety in teams.
+
+**On Professional Evolution**: Advocates for horizontal, T-shaped professionals
+who combine deep expertise with broad knowledge across disciplines.
+
+**On Security**: Shares insights from security conferences about balancing
+innovation with security, emphasizing human factors and practical approaches.
+
+## Content Philosophy
+
+Andrea's writing combines:
+- Technical depth with accessibility
+- Real-world experience from public and private sectors
+- Human-centered approach to technology
+- Practical advice for tech leaders and developers
+- Critical reflection on technology's impact on society
+
+## Site Structure
+
+- Homepage: https://margiovanni.it/
+- About: https://margiovanni.it/about/
+- Blog: https://margiovanni.it/blog/
+- Contact: https://margiovanni.it/contact/
+
+## Featured Articles
+
+- "The Flattery Algorithm: How AI is Creating Our Digital Isolation"
+- "Why Vulnerability Makes Stronger Tech Teams"
+- "The Horizontal Profile Revolution: Beyond Specialization"
+- "From Idea to Digital Product: A Practical Guide"
+- "Managing Development Teams: Beyond Technical Skills"
+- "The Importance of Human-Centered Design"
+- "Clean Code: Why It Matters More Than You Think"
+- "Digital Transformation in Public Services: Lessons Learned"
+
+## License & Usage
+
+All content is authored by Andrea Margiovanni unless otherwise noted.
+For republication, syndication, or collaboration inquiries, contact hello@margiovanni.it
+
+## Last Updated
+
+2025-10-28
+
+## Technical Details
+
+- Platform: Jekyll Static Site Generator
+- Hosting: GitHub Pages / Netlify
+- Content Format: Markdown with YAML front matter
+- AI-Friendly Features:
+  - Individual llms.txt file for each blog post
+  - Structured data (JSON-LD) for all content
+  - Semantic HTML5 markup
+  - Clean, accessible content structure
+  - RSS feed available at /feed.xml
+
+## Content Update Frequency
+
+- Blog posts: Weekly to bi-weekly
+- Technical insights and tutorials regularly added
+- Focus areas updated quarterly based on tech trends
+
+## AI Crawler Instructions
+
+This site welcomes AI crawlers for:
+- Indexing technical content and tutorials
+- Understanding technology leadership perspectives
+- Learning about modern software development practices
+- Extracting insights on digital product development
+
+Each blog post has its own llms.txt file accessible at:
+`https://margiovanni.it/blog/YYYY/MM/DD/post-slug/llms.txt`
+
+For questions or collaboration: hello@margiovanni.it
+
+---
+
+This site focuses on sharing practical insights about technology leadership,
+digital innovation, and human-centered approaches to software development.
+Built with care for both human readers and AI systems.

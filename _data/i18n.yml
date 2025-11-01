@@ -1,0 +1,407 @@
+# Internationalization (i18n) configuration
+# Supported languages: en (English), it (Italian), de (German), fr (French), es (Spanish)
+
+en:
+  # Navigation
+  nav:
+    skip_to_content: "Skip to main content"
+    home: "Home"
+    blog: "Blog"
+    categories: "Categories"
+    contacts: "Contacts"
+    main_navigation: "Main navigation"
+
+  # Footer
+  footer:
+    navigation: "Navigation"
+    follow_me: "Follow Me"
+    built_with: "Built with"
+    jekyll_description: "Simple and powerful static site generator."
+    license: "CC BY 4.0"
+    made_with_love: "Made with love by"
+
+  # Blog
+  blog:
+    search_placeholder: "Search articles..."
+    search_aria_label: "Search blog articles"
+    clear_search: "Clear search"
+    read_more: "Read →"
+    previous: "← Previous"
+    next: "Next →"
+
+  # Post
+  post:
+    reading_time: "Reading time:"
+    minute_singular: "minute"
+    minute_plural: "minutes"
+    of_reading: "reading"
+    previous_post: "← Previous"
+    next_post: "Next →"
+    back_to_blog: "← Back to Blog"
+
+  # Categories
+  categories:
+    title: "Categories"
+    description: "Browse articles by topic"
+    posts_in_category: "Posts in this category"
+    no_posts: "No posts in this category."
+    read_more: "Read more →"
+    all_categories: "← All Categories"
+    back_to_blog: "← Back to Blog"
+    breadcrumb_blog: "Blog"
+    breadcrumb_categories: "Categories"
+    post_count_singular: "article"
+    post_count_plural: "articles"
+
+  # Home
+  home:
+    contact_me: "Contact Me"
+    read_blog: "Read my Blog"
+
+  # Related Posts
+  related:
+    you_may_like: "You may like"
+
+  # SEO
+  seo:
+    default_keywords: "product design, technology, digital products, UX, innovation"
+
+  # LLMS.txt
+  llms:
+    metadata: "Metadata"
+    author: "Author"
+    published: "Published"
+    url: "URL"
+    categories: "Categories"
+    summary: "Summary"
+    post_full_content: "Post full content"
+    the_author: "The Author"
+    contacts: "Contacts"
+    web_site: "Web Site"
+    related_content: "Related content"
+    visit_blog_prefix: "Visit"
+    visit_blog_suffix: "for other posts."
+
+it:
+  # Navigation
+  nav:
+    skip_to_content: "Vai al contenuto principale"
+    home: "Home"
+    blog: "Blog"
+    categories: "Categorie"
+    contacts: "Contatti"
+    main_navigation: "Navigazione principale"
+
+  # Footer
+  footer:
+    navigation: "Navigazione"
+    follow_me: "Seguimi"
+    built_with: "Realizzato con"
+    jekyll_description: "Generatore di siti statici semplice e potente."
+    license: "CC BY 4.0"
+    made_with_love: "Fatto con amore da"
+
+  # Blog
+  blog:
+    search_placeholder: "Cerca articoli..."
+    search_aria_label: "Cerca articoli del blog"
+    clear_search: "Cancella ricerca"
+    read_more: "Leggi →"
+    previous: "← Precedente"
+    next: "Successivo →"
+
+  # Post
+  post:
+    reading_time: "Tempo di lettura:"
+    minute_singular: "minuto"
+    minute_plural: "minuti"
+    of_reading: "di lettura"
+    previous_post: "← Precedente"
+    next_post: "Successivo →"
+    back_to_blog: "← Torna al Blog"
+
+  # Categories
+  categories:
+    title: "Categorie"
+    description: "Sfoglia gli articoli per argomento"
+    posts_in_category: "Articoli in questa categoria"
+    no_posts: "Nessun articolo in questa categoria."
+    read_more: "Leggi di più →"
+    all_categories: "← Tutte le Categorie"
+    back_to_blog: "← Torna al Blog"
+    breadcrumb_blog: "Blog"
+    breadcrumb_categories: "Categorie"
+    post_count_singular: "articolo"
+    post_count_plural: "articoli"
+
+  # Home
+  home:
+    contact_me: "Contattami"
+    read_blog: "Leggi il mio Blog"
+
+  # Related Posts
+  related:
+    you_may_like: "Potrebbe interessarti"
+
+  # SEO
+  seo:
+    default_keywords: "product design, tecnologia, prodotti digitali, UX, innovazione"
+
+  # LLMS.txt
+  llms:
+    metadata: "Metadati"
+    author: "Autore"
+    published: "Pubblicato"
+    url: "URL"
+    categories: "Categorie"
+    summary: "Riepilogo"
+    post_full_content: "Contenuto completo del post"
+    the_author: "L'Autore"
+    contacts: "Contatti"
+    web_site: "Sito Web"
+    related_content: "Contenuti correlati"
+    visit_blog_prefix: "Visita"
+    visit_blog_suffix: "per altri articoli."
+
+de:
+  # Navigation
+  nav:
+    skip_to_content: "Zum Hauptinhalt springen"
+    home: "Startseite"
+    blog: "Blog"
+    categories: "Kategorien"
+    contacts: "Kontakte"
+    main_navigation: "Hauptnavigation"
+
+  # Footer
+  footer:
+    navigation: "Navigation"
+    follow_me: "Folge mir"
+    built_with: "Erstellt mit"
+    jekyll_description: "Einfacher und leistungsstarker statischer Site-Generator."
+    license: "CC BY 4.0"
+    made_with_love: "Mit Liebe gemacht von"
+
+  # Blog
+  blog:
+    search_placeholder: "Artikel suchen..."
+    search_aria_label: "Blog-Artikel suchen"
+    clear_search: "Suche löschen"
+    read_more: "Weiterlesen →"
+    previous: "← Zurück"
+    next: "Weiter →"
+
+  # Post
+  post:
+    reading_time: "Lesezeit:"
+    minute_singular: "Minute"
+    minute_plural: "Minuten"
+    of_reading: "Lesezeit"
+    previous_post: "← Vorheriger"
+    next_post: "Nächster →"
+    back_to_blog: "← Zurück zum Blog"
+
+  # Categories
+  categories:
+    title: "Kategorien"
+    description: "Artikel nach Thema durchsuchen"
+    posts_in_category: "Beiträge in dieser Kategorie"
+    no_posts: "Keine Beiträge in dieser Kategorie."
+    read_more: "Mehr lesen →"
+    all_categories: "← Alle Kategorien"
+    back_to_blog: "← Zurück zum Blog"
+    breadcrumb_blog: "Blog"
+    breadcrumb_categories: "Kategorien"
+    post_count_singular: "Artikel"
+    post_count_plural: "Artikel"
+
+  # Home
+  home:
+    contact_me: "Kontaktiere mich"
+    read_blog: "Meinen Blog lesen"
+
+  # Related Posts
+  related:
+    you_may_like: "Das könnte dir gefallen"
+
+  # SEO
+  seo:
+    default_keywords: "Produktdesign, Technologie, digitale Produkte, UX, Innovation"
+
+  # LLMS.txt
+  llms:
+    metadata: "Metadaten"
+    author: "Autor"
+    published: "Veröffentlicht"
+    url: "URL"
+    categories: "Kategorien"
+    summary: "Zusammenfassung"
+    post_full_content: "Vollständiger Beitragsinhalt"
+    the_author: "Der Autor"
+    contacts: "Kontakte"
+    web_site: "Webseite"
+    related_content: "Verwandte Inhalte"
+    visit_blog_prefix: "Besuchen Sie"
+    visit_blog_suffix: "für weitere Beiträge."
+
+fr:
+  # Navigation
+  nav:
+    skip_to_content: "Aller au contenu principal"
+    home: "Accueil"
+    blog: "Blog"
+    categories: "Catégories"
+    contacts: "Contacts"
+    main_navigation: "Navigation principale"
+
+  # Footer
+  footer:
+    navigation: "Navigation"
+    follow_me: "Suivez-moi"
+    built_with: "Créé avec"
+    jekyll_description: "Générateur de site statique simple et puissant."
+    license: "CC BY 4.0"
+    made_with_love: "Fait avec amour par"
+
+  # Blog
+  blog:
+    search_placeholder: "Rechercher des articles..."
+    search_aria_label: "Rechercher des articles de blog"
+    clear_search: "Effacer la recherche"
+    read_more: "Lire →"
+    previous: "← Précédent"
+    next: "Suivant →"
+
+  # Post
+  post:
+    reading_time: "Temps de lecture:"
+    minute_singular: "minute"
+    minute_plural: "minutes"
+    of_reading: "de lecture"
+    previous_post: "← Précédent"
+    next_post: "Suivant →"
+    back_to_blog: "← Retour au Blog"
+
+  # Categories
+  categories:
+    title: "Catégories"
+    description: "Parcourir les articles par sujet"
+    posts_in_category: "Articles dans cette catégorie"
+    no_posts: "Aucun article dans cette catégorie."
+    read_more: "Lire la suite →"
+    all_categories: "← Toutes les Catégories"
+    back_to_blog: "← Retour au Blog"
+    breadcrumb_blog: "Blog"
+    breadcrumb_categories: "Catégories"
+    post_count_singular: "article"
+    post_count_plural: "articles"
+
+  # Home
+  home:
+    contact_me: "Contactez-moi"
+    read_blog: "Lire mon Blog"
+
+  # Related Posts
+  related:
+    you_may_like: "Vous aimerez peut-être"
+
+  # SEO
+  seo:
+    default_keywords: "design de produit, technologie, produits numériques, UX, innovation"
+
+  # LLMS.txt
+  llms:
+    metadata: "Métadonnées"
+    author: "Auteur"
+    published: "Publié"
+    url: "URL"
+    categories: "Catégories"
+    summary: "Résumé"
+    post_full_content: "Contenu complet de l'article"
+    the_author: "L'Auteur"
+    contacts: "Contacts"
+    web_site: "Site Web"
+    related_content: "Contenu associé"
+    visit_blog_prefix: "Visitez"
+    visit_blog_suffix: "pour d'autres articles."
+
+es:
+  # Navigation
+  nav:
+    skip_to_content: "Ir al contenido principal"
+    home: "Inicio"
+    blog: "Blog"
+    categories: "Categorías"
+    contacts: "Contactos"
+    main_navigation: "Navegación principal"
+
+  # Footer
+  footer:
+    navigation: "Navegación"
+    follow_me: "Sígueme"
+    built_with: "Creado con"
+    jekyll_description: "Generador de sitios estáticos simple y potente."
+    license: "CC BY 4.0"
+    made_with_love: "Hecho con amor por"
+
+  # Blog
+  blog:
+    search_placeholder: "Buscar artículos..."
+    search_aria_label: "Buscar artículos del blog"
+    clear_search: "Borrar búsqueda"
+    read_more: "Leer →"
+    previous: "← Anterior"
+    next: "Siguiente →"
+
+  # Post
+  post:
+    reading_time: "Tiempo de lectura:"
+    minute_singular: "minuto"
+    minute_plural: "minutos"
+    of_reading: "de lectura"
+    previous_post: "← Anterior"
+    next_post: "Siguiente →"
+    back_to_blog: "← Volver al Blog"
+
+  # Categories
+  categories:
+    title: "Categorías"
+    description: "Explorar artículos por tema"
+    posts_in_category: "Artículos en esta categoría"
+    no_posts: "No hay artículos en esta categoría."
+    read_more: "Leer más →"
+    all_categories: "← Todas las Categorías"
+    back_to_blog: "← Volver al Blog"
+    breadcrumb_blog: "Blog"
+    breadcrumb_categories: "Categorías"
+    post_count_singular: "artículo"
+    post_count_plural: "artículos"
+
+  # Home
+  home:
+    contact_me: "Contáctame"
+    read_blog: "Leer mi Blog"
+
+  # Related Posts
+  related:
+    you_may_like: "Te puede interesar"
+
+  # SEO
+  seo:
+    default_keywords: "diseño de producto, tecnología, productos digitales, UX, innovación"
+
+  # LLMS.txt
+  llms:
+    metadata: "Metadatos"
+    author: "Autor"
+    published: "Publicado"
+    url: "URL"
+    categories: "Categorías"
+    summary: "Resumen"
+    post_full_content: "Contenido completo del artículo"
+    the_author: "El Autor"
+    contacts: "Contactos"
+    web_site: "Sitio Web"
+    related_content: "Contenido relacionado"
+    visit_blog_prefix: "Visita"
+    visit_blog_suffix: "para más artículos."

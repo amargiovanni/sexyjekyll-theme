@@ -1,0 +1,81 @@
+{% assign t = site.data.i18n[site.lang] %}
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-grid">
+            <!-- Column 1: About Section -->
+            <div class="footer-section">
+                <p class="footer-title">{{ site.author.name }}</p>
+                <p class="footer-description">{{ site.description }}</p>
+            </div>
+
+            <!-- Column 2: Navigation -->
+            <div class="footer-section">
+                <p class="footer-title">{{ t.footer.navigation }}</p>
+                <ul class="footer-links">
+                    <li><a href="{{ '/' | relative_url }}">{{ t.nav.home }}</a></li>
+                    <li><a href="{{ '/blog' | relative_url }}">{{ t.nav.blog }}</a></li>
+                    <li><a href="{{ '/categories' | relative_url }}">{{ t.nav.categories }}</a></li>
+                    <li><a href="{{ '/contact' | relative_url }}">{{ t.nav.contacts }}</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Social Links -->
+            <div class="footer-section">
+                <p class="footer-title">{{ t.footer.follow_me }}</p>
+                <ul class="footer-links footer-contact-list">
+                    {% for link in site.contact.links %}
+                        <li>
+                            <a href="{{ link.url }}" class="footer-contact-link" {% if link.type != 'email' %}target="_blank" rel="noopener noreferrer"{% endif %}>
+                                <span class="contact-icon">
+                                    {% case link.type %}
+                                        {% when 'email' %}
+                                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                                        {% when 'linkedin' %}
+                                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                                        {% when 'github' %}
+                                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                                        {% when 'instagram' %}
+                                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                                        {% when 'bluesky' %}
+                                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 10.8c-1.087-2.114-4.046-6.053-6.798-7.995C2.566.944 1.561 1.266.902 1.565.139 1.908 0 3.08 0 3.768c0 .69.378 5.65.624 6.479.815 2.736 3.713 3.66 6.383 3.364.136-.02.275-.039.415-.056-.138.022-.276.04-.415.056-3.912.58-7.387 2.005-2.83 7.078 5.013 5.19 6.87-1.113 7.823-4.308.953 3.195 2.05 9.271 7.733 4.308 4.267-4.308 1.172-6.498-2.74-7.078a8.741 8.741 0 0 1-.415-.056c.14.017.279.036.415.056 2.67.297 5.568-.628 6.383-3.364.246-.828.624-5.79.624-6.478 0-.69-.139-1.861-.902-2.206-.659-.298-1.664-.62-4.3 1.24C16.046 4.748 13.087 8.687 12 10.8Z"/></svg>
+                                        {% when 'mastodon' %}
+                                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M21.327 8.566c0-4.339-2.843-5.61-2.843-5.61-1.433-.658-3.894-.935-6.451-.956h-.063c-2.557.021-5.016.298-6.45.956 0 0-2.843 1.272-2.843 5.61 0 .993-.019 2.181.012 3.441.103 4.243.778 8.425 4.701 9.463 1.809.479 3.362.579 4.612.51 2.268-.126 3.541-.809 3.541-.809l-.075-1.646s-1.621.511-3.441.449c-1.804-.062-3.707-.194-3.999-2.409a4.523 4.523 0 0 1-.04-.621s1.77.433 4.014.536c1.372.063 2.658-.08 3.965-.236 2.506-.299 4.688-1.843 4.962-3.254.434-2.223.398-5.424.398-5.424zm-3.353 5.59h-2.081V9.057c0-1.075-.452-1.62-1.357-1.62-1 0-1.501.647-1.501 1.927v2.791h-2.069V9.364c0-1.28-.501-1.927-1.502-1.927-.905 0-1.357.546-1.357 1.62v5.099H6.026V8.903c0-1.074.273-1.927.823-2.558.566-.631 1.307-.955 2.228-.955 1.065 0 1.872.409 2.405 1.228l.518.869.519-.869c.533-.819 1.34-1.228 2.405-1.228.92 0 1.662.324 2.228.955.549.631.822 1.484.822 2.558v5.253z"/></svg>
+                                        {% else %}
+                                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                                    {% endcase %}
+                                </span>
+                                <span class="contact-label">{{ link.name }}</span>
+                            </a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+            <!-- Column 4: Built With -->
+            <div class="footer-section">
+                <p class="footer-title">{{ t.footer.built_with }}</p>
+                <a href="https://jekyllrb.com" target="_blank" rel="noopener noreferrer" style="display: inline-block; margin-bottom: var(--spacing-xs);">
+                    <img src="{{ '/assets/images/jekyll.webp' | relative_url }}" alt="Jekyll" style="height: 40px; width: auto; opacity: 0.9; transition: opacity var(--transition-base);" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.9'">
+                </a>
+                <p class="footer-description">
+                    {{ t.footer.jekyll_description }}
+                </p>
+            </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="footer-bottom">
+            <div class="footer-license">
+                <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer" class="cc-license">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-5.5-2.5l7.51-3.49L17.5 6.5 9.99 9.99 6.5 17.5zm5.5-6.6c.61 0 1.1.49 1.1 1.1s-.49 1.1-1.1 1.1-1.1-.49-1.1-1.1.49-1.1 1.1-1.1z"/>
+                    </svg>
+                    <span>{{ t.footer.license }}</span>
+                </a>
+                <span class="separator">·</span>
+                <span>&copy; {{ 'now' | date: "%Y" }} {{ site.author.name }}</span>
+            </div>
+            <p class="footer-tagline">{{ t.footer.made_with_love }} <a href="https://margiovanni.it" title="Andrea">Andrea</a></p>
+        </div>
+    </div>
+</footer>

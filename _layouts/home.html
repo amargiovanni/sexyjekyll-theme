@@ -1,0 +1,30 @@
+---
+layout: default
+---
+{% assign t = site.data.i18n[site.lang] %}
+<!-- Hero Section -->
+<main id="main-content">
+<section id="hero" class="hero">
+    <div class="hero-container">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="hero-name">{{ site.hero.name }}</span>
+                <span class="hero-role">{{ site.hero.role }}</span>
+            </h1>
+            <p class="hero-subtitle">
+                {{ site.hero.subtitle }}
+            </p>
+            <p class="hero-tagline">
+                {{ site.hero.tagline }}
+            </p>
+            <p class="hero-description">
+                {{ site.hero.description }}
+            </p>
+            <div class="hero-cta">
+                <a href="{{ '/contact' | relative_url }}" class="btn btn-primary">{{ t.home.contact_me }}</a>
+                <a href="{{ '/blog' | relative_url }}" class="btn btn-secondary">{{ t.home.read_blog }}</a>
+            </div>
+        </div>
+    </div>
+</section>
+</main>

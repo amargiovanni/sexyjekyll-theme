@@ -1,0 +1,146 @@
+# Site settings
+title: Andrea Margiovanni
+email: hello@margiovanni.it
+description: >-
+  Head of Technology Solutions @ Oltrematica.
+  Trasformo idee in prodotti digitali che fanno la differenza.
+baseurl: ""
+url: "https://margiovanni.it"
+lang: it  # Options: en, it, de, fr, es
+
+# Author information
+author:
+  name: Andrea Margiovanni
+  email: hello@margiovanni.it
+  linkedin: https://www.linkedin.com/in/margio/
+  bluesky: https://bsky.app/profile/margio.uk
+
+# Navigation logo configuration
+nav_logo:
+  type: image  # Options: 'text' or 'image'
+  # text: AM    # Used when type is 'text'
+  image: /assets/pic.jpeg  # Used when type is 'image'
+  # alt: Site Logo  # Alt text for image logo
+
+# SEO logo (for jekyll-seo-tag plugin)
+# logo: /assets/img/logo.png  # Uncomment and set path for SEO structured data
+
+# Hero section
+hero:
+  name: Andrea Margiovanni
+  role: Head of Technology Solutions
+  subtitle: >-
+    @ <a href="https://oltrematica.it" target="_blank" rel="noopener noreferrer" class="company-link">Oltrematica</a>
+  tagline: Papà e marito.
+  description: >-
+    Trasformo idee in prodotti digitali che fanno la differenza.
+    Appassionato di tecnologia, semplicità e design centrato sull'utente.
+
+# Blog section
+blog:
+  title: Blog
+  description: Riflessioni su product design, tecnologia e costruzione di esperienze digitali.
+
+# Contact section
+contact:
+  title: Mettiamoci in Contatto
+  description: >-
+    Sono sempre interessato a conoscere nuove opportunità,
+    collaborazioni, o semplicemente a fare una chiacchierata su tecnologia e design.
+  links:
+    - name: Email
+      url: mailto:hello@margiovanni.it
+      type: email
+    - name: LinkedIn
+      url: https://www.linkedin.com/in/margio/
+      type: linkedin
+    - name: Bluesky
+      url: https://bsky.app/profile/margio.uk
+      type: bluesky
+    # Add other social profiles following this format:
+    # - name: GitHub
+    #   url: https://github.com/amargiovanni
+    #   type: github
+    # - name: Twitter
+    #   url: https://twitter.com/username
+    #   type: twitter
+    - name: Instagram
+      url: https://www.instagram.com/andrea.margiovanni/
+      type: instagram
+    # - name: Mastodon
+    #   url: https://mastodon.social/@amarg
+    #   type: mastodon
+    # Supported types: email, linkedin, bluesky, twitter, github, instagram,
+    # facebook, youtube, mastodon, telegram, whatsapp, medium, reddit,
+    # discord, tiktok, twitch, slack
+
+# Build settings
+markdown: kramdown
+kramdown:
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    block:
+      line_numbers: true
+permalink: /blog/:year/:month/:day/:title/
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /blog/:year/:month/:day/:title/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
+# Include in processing
+include:
+  - _headers
+  - robots.txt
+  - llms.txt
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .DS_Store
+  - README.md
+
+# Pagination
+paginate: 5
+paginate_path: "/blog/page/:num/"
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-paginate
+  - jekyll-sitemap
+  - liquid_reading_time
+  - jekyll_picture_tag
+
+# Picture Tag Configuration
+picture:
+  source: "assets/img"
+  output: "assets/generated"
+  markup: "picture"
+  presets:
+    default:
+      formats: [webp, original]
+      widths: [400, 600, 800, 1000]
+      sizes:
+        mobile: "100vw"
+        desktop: "800px"
+      attributes:
+        picture: "class='responsive-image'"
+        img: "loading='lazy'"

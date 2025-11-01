@@ -1,0 +1,154 @@
+# Example configuration file for Margio Theme
+# Copy this file to _config.yml and customize it for your site
+
+# Site settings
+title: Your Name
+email: your.email@example.com
+description: >-
+  A brief description of your site.
+  This will appear in meta tags and site description.
+baseurl: ""  # Leave empty if hosting at root domain
+url: "https://yoursite.com"
+lang: en  # or 'it' for Italian
+
+# Author information
+author:
+  name: Your Name
+  email: your.email@example.com
+  linkedin: https://www.linkedin.com/in/yourprofile/
+  bluesky: https://bsky.app/profile/yourhandle
+
+# Navigation logo configuration
+nav_logo:
+  type: text  # Options: 'text' or 'image'
+  text: YN    # Used when type is 'text' - your initials
+  # image: /assets/img/logo.png  # Uncomment and set path when type is 'image'
+  # alt: Your Logo  # Alt text for image logo
+
+# SEO logo (for jekyll-seo-tag plugin)
+# logo: /assets/img/logo.png  # Uncomment and set path for SEO structured data
+
+# Hero section (homepage)
+hero:
+  name: Your Name
+  role: Your Professional Role
+  subtitle: >-
+    @ <a href="https://company.com" target="_blank" rel="noopener noreferrer" class="company-link">Your Company</a>
+  tagline: Your personal tagline or motto.
+  description: >-
+    A longer description about what you do and your passions.
+    This appears on the homepage below your role.
+
+# Blog section
+blog:
+  title: Blog
+  description: Share your thoughts on topics you're passionate about.
+
+# Contact section
+contact:
+  title: Get In Touch
+  description: >-
+    Description of how people can reach you.
+    Let them know you're open to opportunities, collaborations, etc.
+  links:
+    - name: Email
+      url: mailto:your.email@example.com
+      type: email
+    - name: LinkedIn
+      url: https://www.linkedin.com/in/yourprofile/
+      type: linkedin
+    # Add more social profiles as needed:
+    # - name: GitHub
+    #   url: https://github.com/yourusername
+    #   type: github
+    # - name: Twitter
+    #   url: https://twitter.com/yourusername
+    #   type: twitter
+    # - name: Bluesky
+    #   url: https://bsky.app/profile/yourhandle
+    #   type: bluesky
+    # - name: Instagram
+    #   url: https://www.instagram.com/yourusername/
+    #   type: instagram
+    # - name: Mastodon
+    #   url: https://mastodon.social/@yourusername
+    #   type: mastodon
+    # Supported types: email, linkedin, bluesky, twitter, github, instagram,
+    # facebook, youtube, mastodon, telegram, whatsapp, medium, reddit,
+    # discord, tiktok, twitch, slack
+
+# Build settings
+markdown: kramdown
+kramdown:
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    block:
+      line_numbers: true
+permalink: /blog/:year/:month/:day/:title/
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /blog/:year/:month/:day/:title/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
+# Include in processing
+include:
+  - _headers
+  - robots.txt
+  - llms.txt
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .DS_Store
+  - README.md
+  - LICENSE
+  - CHANGELOG.md
+  - CONTRIBUTING.md
+  - CODE_OF_CONDUCT.md
+  - "*.gemspec"
+
+# Pagination
+paginate: 5
+paginate_path: "/blog/page/:num/"
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-paginate
+  - jekyll-sitemap
+  - liquid_reading_time
+  - jekyll_picture_tag
+
+# Picture Tag Configuration (optional)
+picture:
+  source: "assets/img"
+  output: "assets/generated"
+  markup: "picture"
+  presets:
+    default:
+      formats: [webp, original]
+      widths: [400, 600, 800, 1000]
+      sizes:
+        mobile: "100vw"
+        desktop: "800px"
+      attributes:
+        picture: "class='responsive-image'"
+        img: "loading='lazy'"

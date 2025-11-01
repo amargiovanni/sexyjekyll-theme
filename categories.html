@@ -1,0 +1,44 @@
+---
+layout: default
+title: Categorie
+permalink: /categories/
+---
+{% assign t = site.data.i18n[site.lang] %}
+<section class="blog-section">
+    <div class="blog-container">
+        <div class="blog-header">
+            <h1 class="section-title">{{ t.categories.title }}</h1>
+            <p class="blog-description">
+                {{ t.categories.description }}
+            </p>
+        </div>
+
+        <div class="categories-grid">
+            {% assign sorted_categories = site.categories | sort %}
+            {% for category in sorted_categories %}
+                {% assign category_name = category[0] %}
+                {% assign posts = category[1] %}
+                <a href="{{ '/categories/' | append: category_name | relative_url }}" class="category-card">
+                    <div class="category-card-header">
+                        <h2 class="category-card-title">{{ category_name | replace: '-', ' ' | capitalize }}</h2>
+                        <span class="category-count">{{ posts.size }} {% if posts.size == 1 %}{{ t.categories.post_count_singular }}{% else %}{{ t.categories.post_count_plural }}{% endif %}</span>
+                    </div>
+                    <div class="category-card-preview">
+                        {% for post in posts limit:3 %}
+                        <div class="category-post-preview">
+                            <span class="preview-title">{{ post.title }}</span>
+                            <span class="preview-date">{{ post.date | localized_date }}</span>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </a>
+            {% endfor %}
+        </div>
+
+        <div class="back-to-blog">
+            <a href="{{ '/blog' | relative_url }}" class="btn btn-secondary">
+                {{ t.categories.back_to_blog }}
+            </a>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,99 @@
+---
+layout: default
+---
+{% assign t = site.data.i18n[site.lang] %}
+<!-- Reading Progress Bar -->
+<div class="reading-progress-container">
+    <div class="reading-progress-bar" id="reading-progress-bar"></div>
+</div>
+
+{% if page.image %}
+<!-- Hero Section with Cover Image -->
+<div class="post-hero" style="background-image: url('{{ page.image | relative_url }}');">
+    <div class="post-hero-overlay"></div>
+    <div class="post-hero-content">
+        <time class="post-hero-date" datetime="{{ page.date | date_to_xmlschema }}">
+            {{ page.date | localized_date }}
+        </time>
+        {% if page.categories %}
+        <div class="post-hero-categories">
+            {% for category in page.categories %}
+            <a href="{{ '/categories/' | append: category | relative_url }}" class="post-hero-category">{{ category }}</a>
+            {% endfor %}
+        </div>
+        {% endif %}
+        <h1 class="post-hero-title">{{ page.title }}</h1>
+        {% if page.subtitle %}
+        <p class="post-hero-subtitle">{{ page.subtitle }}</p>
+        {% endif %}
+        {% capture reading_time %}{{ content | reading_time }}{% endcapture %}
+        <span class="post-hero-reading-time">{{ reading_time }} {% if reading_time == '1' %}{{ t.post.minute_singular }}{% else %}{{ t.post.minute_plural }}{% endif %} {{ t.post.of_reading }}</span>
+    </div>
+</div>
+{% endif %}
+
+<main id="main-content">
+<article class="post">
+    <div class="post-container">
+        {% unless page.image %}
+        <header class="post-header">
+            <time class="post-date" datetime="{{ page.date | date_to_xmlschema }}">
+                {{ page.date | localized_date }}
+            </time>
+            {% if page.categories %}
+            <div class="post-categories">
+                {% for category in page.categories %}
+                <a href="{{ '/categories/' | append: category | relative_url }}" class="post-category">{{ category }}</a>
+                {% endfor %}
+            </div>
+            {% endif %}
+            <h1 class="post-title">{{ page.title }}</h1>
+            {% if page.subtitle %}
+            <p class="post-subtitle">{{ page.subtitle }}</p>
+            {% endif %}
+            <div class="post-meta">
+                <br />
+                {% capture reading_time %}{{ content | reading_time }}{% endcapture %}
+                <span class="reading-time">{{ t.post.reading_time }} {{ reading_time }} {% if reading_time == '1' %}{{ t.post.minute_singular }}{% else %}{{ t.post.minute_plural }}{% endif %}</span>
+            </div>
+        </header>
+        {% endunless %}
+
+        <div class="post-content">
+            {{ content }}
+        </div>
+
+        <footer class="post-footer">
+            <div class="post-author">
+                <div class="author-info">
+                    <p class="author-name">{{ site.author.name }}</p>
+                    <p class="author-bio">{{ site.description }}</p>
+                </div>
+            </div>
+
+            {% include related-posts.html %}
+
+            <div class="post-navigation">
+                {% if page.previous.url %}
+                <a href="{{ page.previous.url | relative_url }}" class="nav-post nav-prev">
+                    <span class="nav-label">{{ t.post.previous_post }}</span>
+                    <span class="nav-title">{{ page.previous.title }}</span>
+                </a>
+                {% endif %}
+                {% if page.next.url %}
+                <a href="{{ page.next.url | relative_url }}" class="nav-post nav-next">
+                    <span class="nav-label">{{ t.post.next_post }}</span>
+                    <span class="nav-title">{{ page.next.title }}</span>
+                </a>
+                {% endif %}
+            </div>
+
+            <div class="back-to-blog">
+                <a href="{{ '/blog' | relative_url }}" class="btn btn-secondary">
+                    {{ t.post.back_to_blog }}
+                </a>
+            </div>
+        </footer>
+    </div>
+</article>
+</main>

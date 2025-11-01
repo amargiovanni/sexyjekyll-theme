@@ -1,0 +1,82 @@
+{% unless page.layout == 'post' %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "{{ site.author.name }}",
+  "url": "{{ site.url }}",
+  "image": {
+    "@type": "ImageObject",
+    "url": "{{ '/assets/img/profile.jpg' | absolute_url }}",
+    "width": 400,
+    "height": 400
+  },
+  "jobTitle": "Head of Technology Solutions",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Oltrematica",
+    "url": "https://oltrematica.com"
+  },
+  "description": "{{ site.description | escape }}",
+  "email": "{{ site.author.email }}",
+  "sameAs": [
+    "{{ site.author.linkedin }}",
+    "{{ site.author.bluesky }}",
+    "{{ site.url }}"
+  ],
+  "knowsAbout": [
+    "Product Design",
+    "Technology Solutions",
+    "Digital Product Development",
+    "UX Design",
+    "Software Engineering",
+    "Team Management",
+    "Innovation"
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "url": "{{ site.url }}",
+  "name": "{{ site.title }}",
+  "description": "{{ site.description | escape }}",
+  "publisher": {
+    "@type": "Person",
+    "name": "{{ site.author.name }}"
+  },
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "{{ site.url }}/search?q={search_term_string}"
+    },
+    "query-input": "required name=search_term_string"
+  },
+  "inLanguage": "it-IT"
+}
+</script>
+
+{% if page.url == '/' or page.url == '/index.html' %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "dateCreated": "{{ site.time | date_to_xmlschema }}",
+  "dateModified": "{{ site.time | date_to_xmlschema }}",
+  "mainEntity": {
+    "@type": "Person",
+    "name": "{{ site.author.name }}",
+    "description": "{{ site.description | escape }}",
+    "image": "{{ '/assets/img/profile.jpg' | absolute_url }}",
+    "sameAs": [
+      "{{ site.author.linkedin }}",
+      "{{ site.author.bluesky }}"
+    ]
+  }
+}
+</script>
+{% endif %}
+{% endunless %}
