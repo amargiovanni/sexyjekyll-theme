@@ -21,11 +21,13 @@ and this project adheres to
   - Achieved 98.31% statement coverage, 87.75% branch coverage, 95.31% function
     coverage, 98.28% line coverage
   - RSpec testing framework for Ruby/Jekyll plugins
-  - 13 Ruby plugin tests (5 for CategoryPageGenerator, 8 for LocalizedDateFilter)
+  - 13 Ruby plugin tests (5 for CategoryPageGenerator, 8 for
+    LocalizedDateFilter)
   - Test files: `animations.test.js`, `search.test.js`,
-    `table-of-contents.test.js`, `reading-progress.test.js`, `performance.test.js`,
-    `navigation.test.js`, `animated-background.test.js`, `utils.test.js`,
-    `dark-mode.test.js`, `smooth-scroll.test.js`, `external-links.test.js`
+    `table-of-contents.test.js`, `reading-progress.test.js`,
+    `performance.test.js`, `navigation.test.js`, `animated-background.test.js`,
+    `utils.test.js`, `dark-mode.test.js`, `smooth-scroll.test.js`,
+    `external-links.test.js`
   - Test setup with DOM API mocks (IntersectionObserver, matchMedia, scrollTo,
     requestAnimationFrame, getBoundingClientRect)
   - Coverage reports with HTML output (`coverage/lcov-report/index.html`)
