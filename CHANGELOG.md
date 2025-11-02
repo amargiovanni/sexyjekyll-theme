@@ -7,6 +7,25 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [SexyJekyll Theme]
 
+## [1.1.0] - 2025-11-02
+
+### Changed
+- **Demo Content**: Replaced personal information with generic placeholder data
+  - Site title and author changed to "John Doe"
+  - Email addresses changed to `hello@example.com`
+  - Social media links updated to generic placeholder URLs
+  - Navigation logo switched from image to text initials (JD)
+  - Hero section content replaced with neutral demo text
+  - All configuration ready for theme distribution
+- **Date Formatting**: Enhanced English date format
+  - English dates now use "Month Day, Year" format (e.g., "October 31, 2025")
+  - Other languages continue to use "Day Month Year" format (e.g., "31 ottobre 2025")
+  - Updated `localized_date` plugin with language-specific formatting logic
+
+### Fixed
+- Date format consistency across different localizations
+- Language setting now properly reflects English as default
+
 ## [1.0.1] - 2025-11-01
 
 ### Changed
@@ -78,5 +97,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **SEO**: Meta tags, Open Graph, Twitter Cards, structured data, canonical URLs
 - **AI-Friendly**: llms.txt generation for posts and site, clean semantic markup for AI crawlers
 
+[1.1.0]: https://github.com/amargiovanni/sexyjekyll-theme/releases/tag/v1.1.0
 [1.0.1]: https://github.com/amargiovanni/sexyjekyll-theme/releases/tag/v1.0.1
 [1.0.0]: https://github.com/amargiovanni/sexyjekyll-theme/releases/tag/v1.0.0

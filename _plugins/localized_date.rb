@@ -33,7 +33,13 @@ module Jekyll
       month = MONTHS[lang][date.month - 1]
       year = date.year
 
-      "#{day} #{month} #{year}"
+      # English uses "Month Day, Year" format (e.g., "October 31, 2025")
+      # Other languages use "Day Month Year" format (e.g., "31 ottobre 2025")
+      if lang == 'en'
+        "#{month} #{day}, #{year}"
+      else
+        "#{day} #{month} #{year}"
+      end
     end
 
     # Keep italian_date for backward compatibility

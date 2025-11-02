@@ -1,25 +1,25 @@
 # Site settings
-title: Andrea Margiovanni
-email: hello@margiovanni.it
+title: John Doe
+email: hello@example.com
 description: >-
-  Head of Technology Solutions @ Oltrematica.
-  Trasformo idee in prodotti digitali che fanno la differenza.
+  Product Designer & Developer.
+  Building beautiful digital experiences.
 baseurl: ""
-url: "https://margiovanni.it"
-lang: it  # Options: en, it, de, fr, es
+url: "https://example.com"
+lang: en  # Options: en, it, de, fr, es
 
 # Author information
 author:
-  name: Andrea Margiovanni
-  email: hello@margiovanni.it
-  linkedin: https://www.linkedin.com/in/margio/
-  bluesky: https://bsky.app/profile/margio.uk
+  name: John Doe
+  email: hello@example.com
+  linkedin: https://www.linkedin.com/in/johndoe/
+  bluesky: https://bsky.app/profile/johndoe.bsky.social
 
 # Navigation logo configuration
 nav_logo:
-  type: image  # Options: 'text' or 'image'
-  # text: AM    # Used when type is 'text'
-  image: /assets/pic.jpeg  # Used when type is 'image'
+  type: text  # Options: 'text' or 'image'
+  text: JD    # Used when type is 'text'
+  # image: /assets/pic.jpeg  # Used when type is 'image'
   # alt: Site Logo  # Alt text for image logo
 
 # SEO logo (for jekyll-seo-tag plugin)
@@ -27,48 +27,48 @@ nav_logo:
 
 # Hero section
 hero:
-  name: Andrea Margiovanni
-  role: Head of Technology Solutions
+  name: John Doe
+  role: Product Designer & Developer
   subtitle: >-
-    @ <a href="https://oltrematica.it" target="_blank" rel="noopener noreferrer" class="company-link">Oltrematica</a>
-  tagline: Papà e marito.
+    Building digital products that make a difference
+  tagline: Passionate about technology and design.
   description: >-
-    Trasformo idee in prodotti digitali che fanno la differenza.
-    Appassionato di tecnologia, semplicità e design centrato sull'utente.
+    I create beautiful and functional digital experiences.
+    Focused on simplicity, usability, and user-centered design.
 
 # Blog section
 blog:
   title: Blog
-  description: Riflessioni su product design, tecnologia e costruzione di esperienze digitali.
+  description: Thoughts on product design, technology, and building digital experiences.
 
 # Contact section
 contact:
-  title: Mettiamoci in Contatto
+  title: Get In Touch
   description: >-
-    Sono sempre interessato a conoscere nuove opportunità,
-    collaborazioni, o semplicemente a fare una chiacchierata su tecnologia e design.
+    I'm always interested in hearing about new opportunities,
+    collaborations, or just having a chat about technology and design.
   links:
     - name: Email
-      url: mailto:hello@margiovanni.it
+      url: mailto:hello@example.com
       type: email
     - name: LinkedIn
-      url: https://www.linkedin.com/in/margio/
+      url: https://www.linkedin.com/in/johndoe/
       type: linkedin
     - name: Bluesky
-      url: https://bsky.app/profile/margio.uk
+      url: https://bsky.app/profile/johndoe.bsky.social
       type: bluesky
     # Add other social profiles following this format:
     # - name: GitHub
-    #   url: https://github.com/amargiovanni
+    #   url: https://github.com/johndoe
     #   type: github
     # - name: Twitter
-    #   url: https://twitter.com/username
+    #   url: https://twitter.com/johndoe
     #   type: twitter
-    - name: Instagram
-      url: https://www.instagram.com/andrea.margiovanni/
-      type: instagram
+    # - name: Instagram
+    #   url: https://www.instagram.com/johndoe/
+    #   type: instagram
     # - name: Mastodon
-    #   url: https://mastodon.social/@amarg
+    #   url: https://mastodon.social/@johndoe
     #   type: mastodon
     # Supported types: email, linkedin, bluesky, twitter, github, instagram,
     # facebook, youtube, mastodon, telegram, whatsapp, medium, reddit,
