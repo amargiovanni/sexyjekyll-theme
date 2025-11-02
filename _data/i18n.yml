@@ -44,6 +44,12 @@ en:
     next_post: "Next →"
     back_to_blog: "← Back to Blog"
 
+  # Table of Contents
+  toc:
+    title: "Table of Contents"
+    label: "Table of Contents"
+    toggle: "Toggle table of contents"
+
   # Categories
   categories:
     title: "Categories"
@@ -129,6 +135,12 @@ it:
     previous_post: "← Precedente"
     next_post: "Successivo →"
     back_to_blog: "← Torna al Blog"
+
+  # Table of Contents
+  toc:
+    title: "Indice dei Contenuti"
+    label: "Indice dei Contenuti"
+    toggle: "Mostra/nascondi indice dei contenuti"
 
   # Categories
   categories:
@@ -216,6 +228,12 @@ de:
     next_post: "Nächster →"
     back_to_blog: "← Zurück zum Blog"
 
+  # Table of Contents
+  toc:
+    title: "Inhaltsverzeichnis"
+    label: "Inhaltsverzeichnis"
+    toggle: "Inhaltsverzeichnis ein-/ausblenden"
+
   # Categories
   categories:
     title: "Kategorien"
@@ -302,6 +320,12 @@ fr:
     next_post: "Suivant →"
     back_to_blog: "← Retour au Blog"
 
+  # Table of Contents
+  toc:
+    title: "Table des Matières"
+    label: "Table des Matières"
+    toggle: "Afficher/masquer la table des matières"
+
   # Categories
   categories:
     title: "Catégories"
@@ -387,6 +411,12 @@ es:
     previous_post: "← Anterior"
     next_post: "Siguiente →"
     back_to_blog: "← Volver al Blog"
+
+  # Table of Contents
+  toc:
+    title: "Tabla de Contenidos"
+    label: "Tabla de Contenidos"
+    toggle: "Mostrar/ocultar tabla de contenidos"
 
   # Categories
   categories:

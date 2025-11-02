@@ -1,20 +1,40 @@
 # Jekyll
 _site/
+.sass-cache/
 .jekyll-cache/
 .jekyll-metadata
-.sass-cache/
-
-# Bundler
-.bundle/
-vendor/
-Gemfile.lock
 
 # Ruby
 *.gem
-.rbenv-version
-.ruby-version
+*.rbc
+/.config
+/coverage/
+/InstalledFiles
+/pkg/
+/spec/reports/
+/spec/examples.txt
+/test/tmp/
+/test/version_tmp/
+/tmp/
+.rspec_status
 
-# OS Files
+# Bundler
+/.bundle/
+/vendor/bundle
+/lib/bundler/man/
+
+# Node
+node_modules/
+npm-debug.log
+yarn-error.log
+package-lock.json
+yarn.lock
+
+# Testing
+coverage/
+.nyc_output/
+
+# OS
 .DS_Store
 .DS_Store?
 ._*
@@ -22,73 +42,23 @@ Gemfile.lock
 .Trashes
 ehthumbs.db
 Thumbs.db
-*~
 
-# Editor/IDE
+# IDEs
 .vscode/
 .claude/
 .idea/
 *.swp
 *.swo
 *~
-.project
-.settings/
-nbproject/
-*.sublime-project
-*.sublime-workspace
 
 # Logs
 *.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-# Node modules (if using npm/yarn for any frontend tooling)
-node_modules/
-package-lock.json
-yarn.lock
 
 # Backup files
 *.bak
 *.backup
-*~
 
-# Temporary files
-tmp/
-temp/
-
-# Generated assets (if using asset pipeline)
-.asset-cache/
-
-# Environment variables
+# Environment
 .env
 .env.local
 .env.*.local
-
-# Testing
-coverage/
-.nyc_output/
-
-# Build artifacts
-dist/
-build/
-
-# macOS
-.AppleDouble
-.LSOverride
-Icon
-
-# Windows
-desktop.ini
-$RECYCLE.BIN/
-
-# Linux
-.directory
-.Trash-*
-
-# Jekyll Picture Tag generated images (if keeping source in repo)
-# Uncomment if you want to ignore generated responsive images
-# assets/generated/
-
-# Custom excludes for this theme
-# Add any theme-specific files to ignore below

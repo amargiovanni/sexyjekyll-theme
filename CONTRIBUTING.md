@@ -1,6 +1,7 @@
 # Contributing to SexyJekyll Theme
 
-First off, thank you for considering contributing to SexyJekyll Theme! It's people like you that make this theme better for everyone.
+First off, thank you for considering contributing to SexyJekyll Theme! It's
+people like you that make this theme better for everyone.
 
 ## Table of Contents
 
@@ -18,13 +19,17 @@ First off, thank you for considering contributing to SexyJekyll Theme! It's peop
 
 ## Code of Conduct
 
-This project and everyone participating in it is governed by our Code of Conduct. By participating, you are expected to uphold this code. Please report unacceptable behavior to hello@margiovanni.it.
+This project and everyone participating in it is governed by our Code of
+Conduct. By participating, you are expected to uphold this code. Please report
+unacceptable behavior to hello@margiovanni.it.
 
 ## How Can I Contribute?
 
 ### Reporting Bugs
 
-Before creating bug reports, please check the existing issues as you might find out that you don't need to create one. When you are creating a bug report, please include as many details as possible:
+Before creating bug reports, please check the existing issues as you might find
+out that you don't need to create one. When you are creating a bug report,
+please include as many details as possible:
 
 - **Use a clear and descriptive title** for the issue
 - **Describe the exact steps to reproduce the problem**
@@ -35,7 +40,8 @@ Before creating bug reports, please check the existing issues as you might find 
 
 ### Suggesting Enhancements
 
-Enhancement suggestions are tracked as GitHub issues. When creating an enhancement suggestion, please include:
+Enhancement suggestions are tracked as GitHub issues. When creating an
+enhancement suggestion, please include:
 
 - **Use a clear and descriptive title**
 - **Provide a detailed description** of the suggested enhancement
@@ -78,17 +84,20 @@ Enhancement suggestions are tracked as GitHub issues. When creating an enhanceme
 ### Setup Steps
 
 1. Clone your fork:
+
    ```bash
    git clone https://github.com/YOUR-USERNAME/sexyjekyll-theme.git
    cd sexyjekyll-theme
    ```
 
 2. Install dependencies:
+
    ```bash
    bundle install
    ```
 
 3. Run Jekyll locally:
+
    ```bash
    bundle exec jekyll serve
    ```
@@ -134,6 +143,7 @@ Before submitting a pull request:
 - Maintain mobile-first approach
 
 Example:
+
 ```css
 /* Good */
 .post-header {
@@ -160,6 +170,7 @@ Example:
 - Avoid global variables
 
 Example:
+
 ```javascript
 // Good
 function toggleDarkMode() {
@@ -212,6 +223,7 @@ Test your changes on:
 
 ## Questions?
 
-Feel free to open an issue with your question or reach out to hello@margiovanni.it
+Feel free to open an issue with your question or reach out to
+hello@margiovanni.it
 
 Thank you for contributing to Margio Theme!

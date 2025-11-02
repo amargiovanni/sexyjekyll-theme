@@ -41,6 +41,10 @@ blog:
   title: Blog
   description: Thoughts on product design, technology, and building digital experiences.
 
+# Table of Contents
+table_of_contents:
+  enabled: true  # Set to false to disable TOC globally
+
 # Contact section
 contact:
   title: Get In Touch

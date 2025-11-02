@@ -8,7 +8,9 @@
   />
 </a>
 
-Un thème Jekyll moderne et riche en fonctionnalités, conçu pour les blogs professionnels et les sites personnels. Construit en gardant à l'esprit l'accessibilité, les performances et l'expérience utilisateur.
+Un thème Jekyll moderne et riche en fonctionnalités, conçu pour les blogs
+professionnels et les sites personnels. Construit en gardant à l'esprit
+l'accessibilité, les performances et l'expérience utilisateur.
 
 ![Thème SexyJekyll](assets/screens/1.png)
 
@@ -30,24 +32,35 @@ Un thème Jekyll moderne et riche en fonctionnalités, conçu pour les blogs pro
 ## Fonctionnalités
 
 ### Design et Expérience Utilisateur
+
 - **Design Moderne** : Esthétique propre et minimaliste
-- **Entièrement Réactif** : Design mobile-first qui fonctionne sur tous les appareils
-- **Indicateur de Lecture** : Indicateur visuel montrant la progression de la lecture de l'article
+- **Entièrement Réactif** : Design mobile-first qui fonctionne sur tous les
+  appareils
+- **Indicateur de Lecture** : Indicateur visuel montrant la progression de la
+  lecture de l'article
 - **Styles d'Impression** : Mises en page optimisées pour l'impression
 
 ### Contenu et Navigation
-- **Recherche Avancée** : Recherche client instantanée avec mise en évidence des mots-clés
-- **Articles Connexes** : Recommandations intelligentes basées sur les catégories et les étiquettes
+
+- **Recherche Avancée** : Recherche client instantanée avec mise en évidence des
+  mots-clés
+- **Table des Matières** : Génération automatique du TOC pour les articles de
+  blog avec défilement fluide
+- **Articles Connexes** : Recommandations intelligentes basées sur les
+  catégories et les étiquettes
 - **Catégories** : Filtrage et organisation basés sur les catégories
 - **Pagination** : Pagination des articles personnalisable
 
 ### SEO et Réseaux Sociaux
+
 - **Optimisé pour le SEO** : Balises meta, Open Graph, Twitter Cards
-- **Données Structurées** : Schéma JSON-LD pour une meilleure compréhension par les moteurs de recherche
+- **Données Structurées** : Schéma JSON-LD pour une meilleure compréhension par
+  les moteurs de recherche
 - **Flux RSS** : Génération automatique du flux
 - **Plan du Site** : Sitemap auto-généré pour les moteurs de recherche
 
 ### Accessibilité
+
 - **WCAG 2.1 Niveau AA** : Support d'accessibilité complet
 - **Ignorer vers le Contenu** : Aides à la navigation au clavier
 - **HTML Sémantique** : Points de repère HTML5 et structure appropriés
@@ -56,25 +69,41 @@ Un thème Jekyll moderne et riche en fonctionnalités, conçu pour les blogs pro
 - **Contraste Élevé** : Excellents rapports de contraste des couleurs
 
 ### Performance
+
 - **Images Réactives** : Format WebP avec plusieurs tailles
 - **Chargement Paresseux** : Les images se chargent selon les besoins
 - **CSS/JS Optimisés** : Code minifié et efficace
+- **JavaScript Modulaire** : Modules ES6 pour une meilleure maintenabilité et
+  tree-shaking
 - **Temps de Chargement Rapides** : Optimisé pour les performances
 
 ### Fonctionnalités pour les Développeurs
+
 - **Coloration Syntaxique** : Blocs de code avec numéros de ligne (Rouge)
 - **Temps de Lecture** : Estimation automatique du temps de lecture
-- **Multi-langue** : Système i18n complet prenant en charge l'anglais, l'italien, l'allemand, le français et l'espagnol
+- **Multi-langue** : Système i18n complet prenant en charge l'anglais,
+  l'italien, l'allemand, le français et l'espagnol
+- **Architecture Modulaire** : Séparation claire des préoccupations avec modules
+  ES6
+- **Conforme CSP** : Aucun gestionnaire d'événements inline pour plus de
+  sécurité
 - **Personnalisable** : Configuration facile via `_config.yml`
 - **Bien Documenté** : Documentation complète incluse
 
 ### Fonctionnalités IA et LLM
-- **Support llms.txt** : Génération automatique de résumés de contenu adapté aux IA
-- **llms.txt par Article** : Chaque article de blog génère son propre fichier llms.txt dédié à `/blog/YYYY/MM/DD/post-slug/llms.txt`
-- **llms.txt au Niveau du Site** : Fichier llms.txt principal à la racine avec aperçu du site et structure du contenu
-- **Contenu Structuré** : Balisage HTML5 sémantique et propre optimisé pour les crawlers IA
-- **Schéma JSON-LD** : Données structurées enrichies pour une meilleure compréhension du contenu
-- **Adapté aux Crawlers IA** : Approche accueillante de l'indexation par IA avec des instructions claires
+
+- **Support llms.txt** : Génération automatique de résumés de contenu adapté aux
+  IA
+- **llms.txt par Article** : Chaque article de blog génère son propre fichier
+  llms.txt dédié à `/blog/YYYY/MM/DD/post-slug/llms.txt`
+- **llms.txt au Niveau du Site** : Fichier llms.txt principal à la racine avec
+  aperçu du site et structure du contenu
+- **Contenu Structuré** : Balisage HTML5 sémantique et propre optimisé pour les
+  crawlers IA
+- **Schéma JSON-LD** : Données structurées enrichies pour une meilleure
+  compréhension du contenu
+- **Adapté aux Crawlers IA** : Approche accueillante de l'indexation par IA avec
+  des instructions claires
 
 ## Installation
 
@@ -123,9 +152,9 @@ remote_theme: amargiovanni/sexyjekyll-theme
 title: Votre Nom
 email: votre.email@example.com
 description: Description de votre site
-baseurl: ""
-url: "https://votresite.com"
-lang: fr  # Options: en, it, de, fr, es
+baseurl: ''
+url: 'https://votresite.com'
+lang: fr # Options: en, it, de, fr, es
 
 # Informations de l'auteur
 author:
@@ -136,8 +165,8 @@ author:
 
 # Logo de navigation
 nav_logo:
-  type: text  # 'text' ou 'image'
-  text: VN    # Vos initiales ou texte
+  type: text # 'text' ou 'image'
+  text: VN # Vos initiales ou texte
   # image: /assets/img/logo.png  # Ou chemin vers l'image du logo
   # alt: Votre Logo
 
@@ -172,8 +201,8 @@ contact:
 ```markdown
 ---
 layout: post
-title: "Votre Premier Article"
-subtitle: "Sous-titre optionnel"
+title: 'Votre Premier Article'
+subtitle: 'Sous-titre optionnel'
 date: 2025-11-01
 categories: blog tech
 ---
@@ -207,6 +236,7 @@ Visitez `http://localhost:4000` pour voir votre site !
 Le thème utilise ces plugins Jekyll :
 
 **Plugins Standard :**
+
 - `jekyll-feed` - Génération de flux RSS
 - `jekyll-seo-tag` - Balises meta SEO
 - `jekyll-paginate` - Pagination des articles
@@ -215,20 +245,30 @@ Le thème utilise ces plugins Jekyll :
 - `jekyll_picture_tag` - Images réactives
 
 **Plugins Personnalisés :**
-- `llms_txt_generator` - Génère automatiquement les fichiers llms.txt pour chaque article de blog et crée des résumés de contenu adaptés aux IA
-- `auto_related_posts` - Système intelligent de recommandation d'articles basé sur les catégories, les étiquettes et la similarité du contenu utilisant un algorithme de type TF-IDF
-- `category_generator` - Crée automatiquement des pages dédiées pour chaque catégorie avec des listings d'articles filtrés
-- `localized_date` - Filtre Liquid pour formater les dates selon la langue sélectionnée (par exemple, "15 January 2025" en anglais, "15 gennaio 2025" en italien, "15 janvier 2025" en français)
+
+- `llms_txt_generator` - Génère automatiquement les fichiers llms.txt pour
+  chaque article de blog et crée des résumés de contenu adaptés aux IA
+- `auto_related_posts` - Système intelligent de recommandation d'articles basé
+  sur les catégories, les étiquettes et la similarité du contenu utilisant un
+  algorithme de type TF-IDF
+- `category_generator` - Crée automatiquement des pages dédiées pour chaque
+  catégorie avec des listings d'articles filtrés
+- `localized_date` - Filtre Liquid pour formater les dates selon la langue
+  sélectionnée (par exemple, "15 January 2025" en anglais, "15 gennaio 2025" en
+  italien, "15 janvier 2025" en français)
 
 ### Personnalisation
 
 #### Couleurs et Styles
 
-Modifiez `css/style.css` pour personnaliser les couleurs, les polices et les styles.
+Modifiez `css/style.css` pour personnaliser les couleurs, les polices et les
+styles.
 
 #### Liens Sociaux
 
-Configurez les liens sociaux dans `_config.yml` sous `contact.links`. Types pris en charge :
+Configurez les liens sociaux dans `_config.yml` sous `contact.links`. Types pris
+en charge :
+
 - email, linkedin, bluesky, twitter, github, instagram, facebook
 - youtube, mastodon, telegram, whatsapp, medium, reddit
 - discord, tiktok, twitch, slack
@@ -237,12 +277,21 @@ Configurez les liens sociaux dans `_config.yml` sous `contact.links`. Types pris
 
 Une documentation détaillée est disponible dans les fichiers suivants :
 
-- [I18N.md](docs/I18N.md) - Système d'internationalisation et support multilingue
-- [ACCESSIBILITY.md](docs/ACCESSIBILITY.md) - Fonctionnalités d'accessibilité et tests
+- [TABLE_OF_CONTENTS.md](docs/TABLE_OF_CONTENTS.md) - Table des Matières
+  configuration et personnalisation
+- [I18N.md](docs/I18N.md) - Système d'internationalisation et support
+  multilingue
+- [ACCESSIBILITY.md](docs/ACCESSIBILITY.md) - Fonctionnalités d'accessibilité et
+  tests
 - [SEARCH.md](docs/SEARCH.md) - Fonctionnalité de recherche
-- [READING_PROGRESS.md](docs/READING_PROGRESS.md) - Indicateur de progression de lecture
+- [READING_PROGRESS.md](docs/READING_PROGRESS.md) - Indicateur de progression de
+  lecture
 - [STRUCTURED_DATA.md](docs/STRUCTURED_DATA.md) - Données structurées SEO
-- [SOCIAL_SHARE.md](SOCIAL_SHARE.md) - Comment ajouter le partage social (optionnel)
+- [JAVASCRIPT_ARCHITECTURE.md](docs/JAVASCRIPT_ARCHITECTURE.md) - Architecture
+  JavaScript modulaire
+- [SOCIAL_SHARE.md](SOCIAL_SHARE.md) - Comment ajouter le partage social
+  (optionnel)
+- [TESTING.md](docs/TESTING.md) - Guide des tests et de l assurance qualité
 - [COMMENTS.md](docs/COMMENTS.md) - Comment ajouter des commentaires (optionnel)
 - [CHANGELOG.md](CHANGELOG.md) - Historique des versions
 - [PUBLISHING.md](PUBLISHING.md) - Guide pour publier votre thème
@@ -265,11 +314,15 @@ Une documentation détaillée est disponible dans les fichiers suivants :
 
 ## Contribuer
 
-Les contributions sont bienvenues ! N'hésitez pas à soumettre une Pull Request. Pour les changements majeurs, veuillez d'abord ouvrir une issue pour discuter de ce que vous aimeriez changer.
+Les contributions sont bienvenues ! N'hésitez pas à soumettre une Pull Request.
+Pour les changements majeurs, veuillez d'abord ouvrir une issue pour discuter de
+ce que vous aimeriez changer.
 
 1. Créez un fork du dépôt
-2. Créez votre branche de fonctionnalité (`git checkout -b feature/FonctionnaliteFormidable`)
-3. Validez vos modifications (`git commit -m 'Ajoutez une FonctionnaliteFormidable'`)
+2. Créez votre branche de fonctionnalité
+   (`git checkout -b feature/FonctionnaliteFormidable`)
+3. Validez vos modifications
+   (`git commit -m 'Ajoutez une FonctionnaliteFormidable'`)
 4. Poussez vers la branche (`git push origin feature/FonctionnaliteFormidable`)
 5. Ouvrez une Pull Request
 
@@ -277,12 +330,15 @@ Les contributions sont bienvenues ! N'hésitez pas à soumettre une Pull Request
 
 Si vous rencontrez des problèmes ou avez des questions :
 
-- Ouvrez une issue sur [GitHub](https://github.com/amargiovanni/sexyjekyll-theme/issues)
-- Consultez la [documentation](https://github.com/amargiovanni/sexyjekyll-theme#readme)
+- Ouvrez une issue sur
+  [GitHub](https://github.com/amargiovanni/sexyjekyll-theme/issues)
+- Consultez la
+  [documentation](https://github.com/amargiovanni/sexyjekyll-theme#readme)
 
 ## Licence
 
-Ce projet est licencié sous la Licence MIT - voir le fichier [LICENSE](LICENSE) pour plus de détails.
+Ce projet est licencié sous la Licence MIT - voir le fichier [LICENSE](LICENSE)
+pour plus de détails.
 
 ## Crédits
 
@@ -296,4 +352,5 @@ Créé par [Andrea Margiovanni](https://margiovanni.it)
 
 ---
 
-Si vous trouvez ce thème utile, veuillez envisager de lui donner une étoile sur GitHub !
+Si vous trouvez ce thème utile, veuillez envisager de lui donner une étoile sur
+GitHub !

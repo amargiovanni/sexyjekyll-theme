@@ -8,7 +8,8 @@
   />
 </a>
 
-A modern, feature-rich Jekyll theme designed for professional blogs and personal websites. Built with accessibility, performance, and user experience in mind.
+A modern, feature-rich Jekyll theme designed for professional blogs and personal
+websites. Built with accessibility, performance, and user experience in mind.
 
 ![SexyJekyll Theme](assets/screens/1.png)
 
@@ -30,24 +31,30 @@ A modern, feature-rich Jekyll theme designed for professional blogs and personal
 ## Features
 
 ### Design & User Experience
+
 - **Modern Design**: Clean, minimalist aesthetic
 - **Fully Responsive**: Mobile-first design that works on all devices
 - **Reading Progress**: Visual indicator showing article reading progress
 - **Print Styles**: Optimized layouts for printing
 
 ### Content & Navigation
+
 - **Advanced Search**: Instant client-side search with keyword highlighting
+- **Table of Contents**: Automatic TOC generation for blog posts with smooth
+  scrolling
 - **Related Posts**: Smart post recommendations based on categories and tags
 - **Categories**: Category-based filtering and organization
 - **Pagination**: Customizable post pagination
 
 ### SEO & Social
+
 - **SEO Optimized**: Meta tags, Open Graph, Twitter Cards
 - **Structured Data**: JSON-LD schema for better search engine understanding
 - **RSS Feed**: Automatic feed generation
 - **Sitemap**: Auto-generated sitemap for search engines
 
 ### Accessibility
+
 - **WCAG 2.1 Level AA**: Comprehensive accessibility support
 - **Skip to Content**: Keyboard navigation helpers
 - **Semantic HTML**: Proper HTML5 landmarks and structure
@@ -56,25 +63,36 @@ A modern, feature-rich Jekyll theme designed for professional blogs and personal
 - **High Contrast**: Excellent color contrast ratios
 
 ### Performance
+
 - **Responsive Images**: WebP format with multiple sizes
 - **Lazy Loading**: Images load as needed
 - **Optimized CSS/JS**: Minified and efficient code
+- **Modular JavaScript**: ES6 modules for better maintainability and
+  tree-shaking
 - **Fast Load Times**: Optimized for performance
 
 ### Developer Features
+
 - **Syntax Highlighting**: Code blocks with line numbers (Rouge)
 - **Reading Time**: Automatic reading time estimation
-- **Multi-language**: Full i18n system supporting English, Italian, German, French, and Spanish
+- **Multi-language**: Full i18n system supporting English, Italian, German,
+  French, and Spanish
+- **Modular Architecture**: Clean separation of concerns with ES6 modules
+- **CSP Compliant**: No inline event handlers for enhanced security
 - **Customizable**: Easy configuration via `_config.yml`
 - **Well Documented**: Comprehensive documentation included
 
 ### AI & LLM Features
+
 - **llms.txt Support**: Automatic generation of AI-friendly content summaries
-- **Per-Post llms.txt**: Each blog post generates its own dedicated llms.txt file at `/blog/YYYY/MM/DD/post-slug/llms.txt`
-- **Site-level llms.txt**: Main llms.txt file at root with site overview and content structure
+- **Per-Post llms.txt**: Each blog post generates its own dedicated llms.txt
+  file at `/blog/YYYY/MM/DD/post-slug/llms.txt`
+- **Site-level llms.txt**: Main llms.txt file at root with site overview and
+  content structure
 - **Structured Content**: Clean, semantic HTML5 markup optimized for AI crawlers
 - **JSON-LD Schema**: Rich structured data for better content understanding
-- **AI Crawler Friendly**: Welcoming approach to AI indexing with clear instructions
+- **AI Crawler Friendly**: Welcoming approach to AI indexing with clear
+  instructions
 
 ## Installation
 
@@ -123,9 +141,9 @@ remote_theme: amargiovanni/sexyjekyll-theme
 title: Your Name
 email: your.email@example.com
 description: Your site description
-baseurl: ""
-url: "https://yoursite.com"
-lang: en  # Options: en, it, de, fr, es
+baseurl: ''
+url: 'https://yoursite.com'
+lang: en # Options: en, it, de, fr, es
 
 # Author information
 author:
@@ -136,8 +154,8 @@ author:
 
 # Navigation logo
 nav_logo:
-  type: text  # 'text' or 'image'
-  text: YN    # Your initials or text
+  type: text # 'text' or 'image'
+  text: YN # Your initials or text
   # image: /assets/img/logo.png  # Or path to logo image
   # alt: Your Logo
 
@@ -153,6 +171,10 @@ hero:
 blog:
   title: Blog
   description: Your blog description
+
+# Table of Contents
+table_of_contents:
+  enabled: true # Set to false to disable TOC globally
 
 # Contact section
 contact:
@@ -172,14 +194,23 @@ contact:
 ```markdown
 ---
 layout: post
-title: "Your First Post"
-subtitle: "Optional subtitle"
+title: 'Your First Post'
+subtitle: 'Optional subtitle'
 date: 2025-11-01
 categories: blog tech
+toc: true # Optional: set to false to disable TOC for this post
 ---
 
 Your post content here...
 ```
+
+**Note:** The Table of Contents (TOC) is automatically generated from H2, H3,
+and H4 headings in your posts. You can:
+
+- Disable TOC globally by setting `table_of_contents.enabled: false` in
+  `_config.yml`
+- Disable TOC for a specific post by adding `toc: false` to the post's front
+  matter
 
 4. **Run Jekyll**:
 
@@ -207,6 +238,7 @@ Visit `http://localhost:4000` to see your site!
 The theme uses these Jekyll plugins:
 
 **Standard Plugins:**
+
 - `jekyll-feed` - RSS feed generation
 - `jekyll-seo-tag` - SEO meta tags
 - `jekyll-paginate` - Post pagination
@@ -215,10 +247,16 @@ The theme uses these Jekyll plugins:
 - `jekyll_picture_tag` - Responsive images
 
 **Custom Plugins:**
-- `llms_txt_generator` - Automatically generates llms.txt files for each blog post and creates AI-friendly content summaries
-- `auto_related_posts` - Intelligent post recommendation system based on categories, tags, and content similarity using TF-IDF-like algorithm
-- `category_generator` - Automatically creates dedicated pages for each category with filtered post listings
-- `localized_date` - Liquid filter for formatting dates according to the selected language (e.g., "15 January 2025" in English, "15 gennaio 2025" in Italian)
+
+- `llms_txt_generator` - Automatically generates llms.txt files for each blog
+  post and creates AI-friendly content summaries
+- `auto_related_posts` - Intelligent post recommendation system based on
+  categories, tags, and content similarity using TF-IDF-like algorithm
+- `category_generator` - Automatically creates dedicated pages for each category
+  with filtered post listings
+- `localized_date` - Liquid filter for formatting dates according to the
+  selected language (e.g., "15 January 2025" in English, "15 gennaio 2025" in
+  Italian)
 
 ### Customization
 
@@ -229,6 +267,7 @@ Edit `css/style.css` to customize colors, fonts, and styles.
 #### Social Links
 
 Configure social links in `_config.yml` under `contact.links`. Supported types:
+
 - email, linkedin, bluesky, twitter, github, instagram, facebook
 - youtube, mastodon, telegram, whatsapp, medium, reddit
 - discord, tiktok, twitch, slack
@@ -237,12 +276,15 @@ Configure social links in `_config.yml` under `contact.links`. Supported types:
 
 Detailed documentation is available in the following files:
 
+- [TABLE_OF_CONTENTS.md](docs/TABLE_OF_CONTENTS.md) - Table of Contents
+  configuration and customization
 - [I18N.md](docs/I18N.md) - Internationalization system and language support
 - [ACCESSIBILITY.md](docs/ACCESSIBILITY.md) - Accessibility features and testing
 - [SEARCH.md](docs/SEARCH.md) - Search functionality
 - [READING_PROGRESS.md](docs/READING_PROGRESS.md) - Reading progress indicator
 - [STRUCTURED_DATA.md](docs/STRUCTURED_DATA.md) - SEO structured data
 - [SOCIAL_SHARE.md](SOCIAL_SHARE.md) - How to add social sharing (optional)
+- [TESTING.md](docs/TESTING.md) - Testing and quality assurance guide
 - [COMMENTS.md](docs/COMMENTS.md) - How to add comments (optional)
 - [CHANGELOG.md](CHANGELOG.md) - Version history
 - [PUBLISHING.md](PUBLISHING.md) - Guide to publish your theme
@@ -265,7 +307,8 @@ Detailed documentation is available in the following files:
 
 ## Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
+Contributions are welcome! Please feel free to submit a Pull Request. For major
+changes, please open an issue first to discuss what you would like to change.
 
 1. Fork the repository
 2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
@@ -277,12 +320,15 @@ Contributions are welcome! Please feel free to submit a Pull Request. For major 
 
 If you encounter any issues or have questions:
 
-- Open an issue on [GitHub](https://github.com/amargiovanni/sexyjekyll-theme/issues)
-- Check the [documentation](https://github.com/amargiovanni/sexyjekyll-theme#readme)
+- Open an issue on
+  [GitHub](https://github.com/amargiovanni/sexyjekyll-theme/issues)
+- Check the
+  [documentation](https://github.com/amargiovanni/sexyjekyll-theme#readme)
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
+for details.
 
 ## Credits
 

@@ -1,0 +1,64 @@
+require:
+  - rubocop-performance
+  - rubocop-rspec
+
+AllCops:
+  TargetRubyVersion: 3.0
+  NewCops: enable
+  Exclude:
+    - 'vendor/**/*'
+    - '_site/**/*'
+    - '.jekyll-cache/**/*'
+    - 'node_modules/**/*'
+
+# Layout
+Layout/LineLength:
+  Max: 100
+  Exclude:
+    - 'spec/**/*'
+
+# Style
+Style/Documentation:
+  Enabled: false
+
+Style/StringLiterals:
+  EnforcedStyle: single_quotes
+
+Style/FrozenStringLiteralComment:
+  Enabled: true
+
+Style/HashSyntax:
+  EnforcedStyle: ruby19
+
+# Metrics
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*'
+    - '_plugins/**/*'
+
+Metrics/MethodLength:
+  Max: 20
+  Exclude:
+    - '_plugins/**/*'
+
+# Naming
+Naming/FileName:
+  Exclude:
+    - 'Gemfile'
+
+# Performance
+Performance/Casecmp:
+  Enabled: true
+
+Performance/StringReplacement:
+  Enabled: true
+
+# RSpec
+RSpec/ExampleLength:
+  Max: 10
+
+RSpec/MultipleExpectations:
+  Max: 5
+
+RSpec/NestedGroups:
+  Max: 3

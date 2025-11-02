@@ -1,0 +1,22 @@
+{
+  "extends": ["stylelint-config-standard"],
+  "plugins": ["stylelint-order"],
+  "rules": {
+    "order/properties-alphabetical-order": true,
+    "color-hex-length": "long",
+    "color-named": null,
+    "declaration-block-no-redundant-longhand-properties": true,
+    "declaration-no-important": null,
+    "declaration-block-no-duplicate-properties": null,
+    "font-family-name-quotes": "always-where-recommended",
+    "function-url-quotes": "always",
+    "keyframes-name-pattern": null,
+    "length-zero-no-unit": true,
+    "max-nesting-depth": 3,
+    "no-descending-specificity": null,
+    "no-duplicate-selectors": null,
+    "selector-class-pattern": null,
+    "selector-max-id": 0,
+    "value-keyword-case": "lower"
+  }
+}

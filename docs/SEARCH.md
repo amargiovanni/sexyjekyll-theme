@@ -1,23 +1,28 @@
 # Search Functionality Documentation
 
 ## Overview
-The blog now includes a powerful client-side search feature using Simple Jekyll Search. Users can search through all blog posts by title, subtitle, content, and categories.
+
+The blog now includes a powerful client-side search feature using Simple Jekyll
+Search. Users can search through all blog posts by title, subtitle, content, and
+categories.
 
 ## Implementation
 
 ### Files Created/Modified
 
 1. **[search.json](search.json)** - Search index data file
-   - Contains all blog posts with title, subtitle, excerpt, categories, date, and URL
+   - Contains all blog posts with title, subtitle, excerpt, categories, date,
+     and URL
    - Generated at build time by Jekyll
    - Used by Simple Jekyll Search to perform searches
 
-2. **[js/simple-jekyll-search.min.js](js/simple-jekyll-search.min.js)** - Search library
+2. **[js/simple-jekyll-search.min.js](js/simple-jekyll-search.min.js)** - Search
+   library
    - Client-side JavaScript search library
    - Lightweight (~4KB)
    - No external dependencies
 
-3. **[_layouts/blog.html](_layouts/blog.html:15-37)** - Search UI
+3. **[\_layouts/blog.html](_layouts/blog.html:15-37)** - Search UI
    - Search input with icon
    - Clear button
    - Results counter
@@ -38,7 +43,9 @@ The blog now includes a powerful client-side search feature using Simple Jekyll 
 ## Features
 
 ### User Features
-- ✅ **Real-time search** - Results update as you type (debounced for performance)
+
+- ✅ **Real-time search** - Results update as you type (debounced for
+  performance)
 - ✅ **Clear button** - X button appears when typing to quickly clear search
 - ✅ **Keyboard shortcuts** - Press ESC to clear search
 - ✅ **Results count** - Shows number of results found
@@ -47,6 +54,7 @@ The blog now includes a powerful client-side search feature using Simple Jekyll 
 - ✅ **Accessible** - ARIA labels, keyboard navigation, focus management
 
 ### Technical Features
+
 - ✅ **Client-side** - No server required, works on static hosting
 - ✅ **Fast** - Search happens instantly in the browser
 - ✅ **Small footprint** - Only ~4KB of JavaScript
@@ -57,6 +65,7 @@ The blog now includes a powerful client-side search feature using Simple Jekyll 
 ## Search Index Fields
 
 The search looks through:
+
 - **title** - Post title
 - **subtitle** - Post subtitle (if present)
 - **excerpt** - First 50 words of post content
@@ -66,7 +75,9 @@ The search looks through:
 ## How It Works
 
 ### 1. Build Time
+
 Jekyll generates `search.json` with all post data:
+
 ```json
 [
   {
@@ -82,14 +93,18 @@ Jekyll generates `search.json` with all post data:
 ```
 
 ### 2. Page Load
+
 When the blog page loads:
+
 1. Search UI is rendered (hidden results)
 2. JavaScript initializes search
 3. Simple Jekyll Search library loads dynamically
 4. Search index (`search.json`) is fetched
 
 ### 3. User Types
+
 As the user types:
+
 1. Input is debounced (300ms delay)
 2. Simple Jekyll Search filters posts
 3. Results are rendered using template
@@ -97,7 +112,9 @@ As the user types:
 5. Results count is shown
 
 ### 4. User Clears
+
 When clearing search:
+
 1. Clear button or ESC key triggers clear
 2. Search results are hidden
 3. Regular posts are shown again
@@ -114,35 +131,41 @@ window.simpleJekyllSearch = SimpleJekyllSearch({
   searchInput: searchInput,
   resultsContainer: searchResults,
   json: '/search.json',
-  searchResultTemplate: '...',  // Customize result HTML
-  noResultsText: '...',          // Customize no results message
-  limit: 20,                      // Max results (default: 20)
-  fuzzy: false,                   // Enable fuzzy matching (default: false)
-  exclude: []                     // Fields to exclude from search
+  searchResultTemplate: '...', // Customize result HTML
+  noResultsText: '...', // Customize no results message
+  limit: 20, // Max results (default: 20)
+  fuzzy: false, // Enable fuzzy matching (default: false)
+  exclude: [], // Fields to exclude from search
 });
 ```
 
 ### Enable Fuzzy Search
 
 Change `fuzzy: false` to `fuzzy: true` for less strict matching:
+
 ```javascript
-fuzzy: true  // Will match "prodct" → "product"
+fuzzy: true; // Will match "prodct" → "product"
 ```
 
 ### Adjust Debounce Delay
 
 In [js/main.js:274](js/main.js#L274), change the delay (in milliseconds):
+
 ```javascript
-searchInput.addEventListener('input', debounce((e) => {
-  // ...
-}, 300));  // Change 300 to desired delay
+searchInput.addEventListener(
+  'input',
+  debounce((e) => {
+    // ...
+  }, 300)
+); // Change 300 to desired delay
 ```
 
 ### Limit Search Results
 
 Change the `limit` parameter:
+
 ```javascript
-limit: 10  // Show max 10 results instead of 20
+limit: 10; // Show max 10 results instead of 20
 ```
 
 ### Add More Fields to Search
@@ -151,6 +174,7 @@ limit: 10  // Show max 10 results instead of 20
 2. Simple Jekyll Search will automatically search new fields
 
 Example - Add tags:
+
 ```liquid
 {% raw %}"tags": "{{ post.tags | join: ', ' }}",{% endraw %}
 ```
@@ -175,12 +199,13 @@ searchResultTemplate: `
       </div>
     </div>
   </article>
-`
+`;
 ```
 
 ## Testing
 
 ### Manual Testing
+
 1. Navigate to the blog page
 2. Type in the search box
 3. Verify results appear instantly
@@ -190,6 +215,7 @@ searchResultTemplate: `
 7. Test keyboard navigation (Tab through results)
 
 ### Test Cases
+
 - Search for common words (e.g., "design", "product")
 - Search for exact post titles
 - Search for categories
@@ -199,7 +225,9 @@ searchResultTemplate: `
 - Test on mobile devices
 
 ### Performance Testing
+
 The search is optimized for performance:
+
 - Input is debounced (300ms)
 - Library loads asynchronously
 - Results render efficiently
@@ -208,6 +236,7 @@ The search is optimized for performance:
 ## Browser Support
 
 Works in all modern browsers:
+
 - ✅ Chrome/Edge (latest)
 - ✅ Firefox (latest)
 - ✅ Safari (latest)
@@ -233,18 +262,21 @@ Legacy browsers (IE11) are not supported.
 ## Troubleshooting
 
 ### Search Not Working
+
 1. Check browser console for errors
 2. Verify `search.json` is accessible at `/search.json`
 3. Verify Simple Jekyll Search loaded: `window.SimpleJekyllSearch`
 4. Check if elements exist: `#search-input`, `#search-results`
 
 ### Results Not Showing
+
 1. Check if `search.json` contains posts
 2. Verify search template is correct
 3. Check CSS - results container might be hidden
 4. Try different search terms
 
 ### Styling Issues
+
 1. Check CSS is loaded
 2. Verify class names match
 3. Test in different browsers
@@ -253,6 +285,7 @@ Legacy browsers (IE11) are not supported.
 ## Future Enhancements
 
 Consider adding:
+
 - [ ] Search suggestions/autocomplete
 - [ ] Search by date range
 - [ ] Filter by category alongside search
@@ -271,5 +304,6 @@ Consider adding:
 ## Support
 
 For issues or questions:
+
 - Email: {{ site.author.email }}
 - GitHub: Open an issue in your repository

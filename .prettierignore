@@ -1,0 +1,18 @@
+# Dependencies
+node_modules/
+vendor/
+
+# Build outputs
+_site/
+.jekyll-cache/
+.sass-cache/
+
+# Backup files
+*.bak
+
+# Minified files
+*.min.js
+*.min.css
+
+# Vendor libraries
+js/simple-jekyll-search.min.js

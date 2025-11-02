@@ -8,7 +8,9 @@
   />
 </a>
 
-Ein modernes, funktionsreiches Jekyll-Theme, das für professionelle Blogs und persönliche Websites entwickelt wurde. Gebaut mit Fokus auf Barrierefreiheit, Leistung und Benutzererfahrung.
+Ein modernes, funktionsreiches Jekyll-Theme, das für professionelle Blogs und
+persönliche Websites entwickelt wurde. Gebaut mit Fokus auf Barrierefreiheit,
+Leistung und Benutzererfahrung.
 
 ![SexyJekyll Theme](assets/screens/1.png)
 
@@ -30,51 +32,75 @@ Ein modernes, funktionsreiches Jekyll-Theme, das für professionelle Blogs und p
 ## Funktionen
 
 ### Design und Benutzererfahrung
+
 - **Modernes Design**: Saubere, minimalistische Ästhetik
-- **Vollständig responsiv**: Mobile-first Design, das auf allen Geräten funktioniert
+- **Vollständig responsiv**: Mobile-first Design, das auf allen Geräten
+  funktioniert
 - **Lesefortschritt**: Visueller Indikator für den Leseffortschritt von Artikeln
 - **Druckstile**: Optimierte Layouts zum Ausdrucken
 
 ### Inhalts- und Navigationsfunktionen
+
 - **Erweiterte Suche**: Sofortige clientseitige Suche mit Keyword-Hervorhebung
-- **Verwandte Beiträge**: Intelligente Beitragsempfehlungen basierend auf Kategorien und Tags
+- **Inhaltsverzeichnis**: Automatische TOC-Generierung für Blogbeiträge mit
+  sanftem Scrollen
+- **Verwandte Beiträge**: Intelligente Beitragsempfehlungen basierend auf
+  Kategorien und Tags
 - **Kategorien**: Kategoriebasierte Filterung und Organisation
 - **Paginierung**: Anpassbare Beitragspaginierung
 
 ### SEO und Soziale Medien
+
 - **SEO-optimiert**: Meta-Tags, Open Graph, Twitter Cards
-- **Strukturierte Daten**: JSON-LD Schema für besseres Verständnis durch Suchmaschinen
+- **Strukturierte Daten**: JSON-LD Schema für besseres Verständnis durch
+  Suchmaschinen
 - **RSS-Feed**: Automatische Feed-Generierung
 - **Sitemap**: Automatisch generierte Sitemap für Suchmaschinen
 
 ### Barrierefreiheit
+
 - **WCAG 2.1 Level AA**: Umfassende Unterstützung für Barrierefreiheit
 - **Skip to Content**: Hilfen zur Tastaturnavigation
 - **Semantisches HTML**: Richtige HTML5-Landmarks und Struktur
 - **ARIA-Labels**: Bildschirmleser-freundlich
-- **Reduced Motion**: Respektiert Voreinstellungen des Benutzers für Bewegungsanimationen
+- **Reduced Motion**: Respektiert Voreinstellungen des Benutzers für
+  Bewegungsanimationen
 - **Hoher Kontrast**: Ausgezeichnete Farbkontrastverhältnisse
 
 ### Leistung
+
 - **Responsive Bilder**: WebP-Format mit mehreren Größen
 - **Lazy Loading**: Bilder werden bei Bedarf geladen
 - **Optimiertes CSS/JS**: Minifizierter und effizienter Code
+- **Modulares JavaScript**: ES6-Module für bessere Wartbarkeit und Tree-Shaking
 - **Schnelle Ladezeiten**: Optimiert für Leistung
 
 ### Entwickler-Funktionen
+
 - **Syntax-Hervorhebung**: Code-Blöcke mit Zeilennummern (Rouge)
 - **Lesezeit**: Automatische Schätzung der Lesezeit
-- **Mehrsprachig**: Vollständiges i18n-System mit Unterstützung für Englisch, Italienisch, Deutsch, Französisch und Spanisch
+- **Mehrsprachig**: Vollständiges i18n-System mit Unterstützung für Englisch,
+  Italienisch, Deutsch, Französisch und Spanisch
+- **Modulare Architektur**: Klare Trennung der Verantwortlichkeiten mit
+  ES6-Modulen
+- **CSP-konform**: Keine Inline-Event-Handler für erhöhte Sicherheit
 - **Anpassbar**: Einfache Konfiguration über `_config.yml`
 - **Gut dokumentiert**: Umfassende Dokumentation enthalten
 
 ### KI und LLM-Funktionen
-- **llms.txt-Unterstützung**: Automatische Generierung von KI-freundlichen Inhaltszusammenfassungen
-- **Pro-Beitrag llms.txt**: Jeder Blogbeitrag generiert seine eigene llms.txt-Datei unter `/blog/YYYY/MM/DD/post-slug/llms.txt`
-- **Seitenebene llms.txt**: Hauptdatei llms.txt im Root-Verzeichnis mit Siteübersicht und Inhaltsstruktur
-- **Strukturierter Inhalt**: Saubere, semantische HTML5-Markierung, optimiert für KI-Crawler
-- **JSON-LD Schema**: Umfangreiche strukturierte Daten für besseres Inhaltsverständnis
-- **KI-Crawler-freundlich**: Willkommener Zugang zur KI-Indexierung mit klaren Anweisungen
+
+- **llms.txt-Unterstützung**: Automatische Generierung von KI-freundlichen
+  Inhaltszusammenfassungen
+- **Pro-Beitrag llms.txt**: Jeder Blogbeitrag generiert seine eigene
+  llms.txt-Datei unter `/blog/YYYY/MM/DD/post-slug/llms.txt`
+- **Seitenebene llms.txt**: Hauptdatei llms.txt im Root-Verzeichnis mit
+  Siteübersicht und Inhaltsstruktur
+- **Strukturierter Inhalt**: Saubere, semantische HTML5-Markierung, optimiert
+  für KI-Crawler
+- **JSON-LD Schema**: Umfangreiche strukturierte Daten für besseres
+  Inhaltsverständnis
+- **KI-Crawler-freundlich**: Willkommener Zugang zur KI-Indexierung mit klaren
+  Anweisungen
 
 ## Installation
 
@@ -123,9 +149,9 @@ remote_theme: amargiovanni/sexyjekyll-theme
 title: Your Name
 email: your.email@example.com
 description: Your site description
-baseurl: ""
-url: "https://yoursite.com"
-lang: de  # Optionen: en, it, de, fr, es
+baseurl: ''
+url: 'https://yoursite.com'
+lang: de # Optionen: en, it, de, fr, es
 
 # Autoreninfos
 author:
@@ -136,8 +162,8 @@ author:
 
 # Navigationslogo
 nav_logo:
-  type: text  # 'text' oder 'image'
-  text: YN    # Ihre Initialen oder Text
+  type: text # 'text' oder 'image'
+  text: YN # Ihre Initialen oder Text
   # image: /assets/img/logo.png  # Oder Pfad zum Logo-Bild
   # alt: Your Logo
 
@@ -172,8 +198,8 @@ contact:
 ```markdown
 ---
 layout: post
-title: "Your First Post"
-subtitle: "Optional subtitle"
+title: 'Your First Post'
+subtitle: 'Optional subtitle'
 date: 2025-11-01
 categories: blog tech
 ---
@@ -207,6 +233,7 @@ Besuchen Sie `http://localhost:4000`, um Ihre Site zu sehen!
 Das Theme verwendet diese Jekyll-Plugins:
 
 **Standard-Plugins:**
+
 - `jekyll-feed` - RSS-Feed-Generierung
 - `jekyll-seo-tag` - SEO Meta-Tags
 - `jekyll-paginate` - Beitragspaginierung
@@ -215,10 +242,16 @@ Das Theme verwendet diese Jekyll-Plugins:
 - `jekyll_picture_tag` - Responsive Bilder
 
 **Benutzerdefinierte Plugins:**
-- `llms_txt_generator` - Generiert automatisch llms.txt-Dateien für jeden Blogbeitrag und erstellt KI-freundliche Inhaltszusammenfassungen
-- `auto_related_posts` - Intelligentes Beitragsempfehlungssystem basierend auf Kategorien, Tags und Inhaltsähnlichkeit mit TF-IDF-ähnlichem Algorithmus
-- `category_generator` - Erstellt automatisch dedizierte Seiten für jede Kategorie mit gefilterten Beitragsauflistungen
-- `localized_date` - Liquid-Filter zur Formatierung von Daten entsprechend der ausgewählten Sprache (z.B. "15 January 2025" auf Englisch, "15 gennaio 2025" auf Italienisch, "15 Januar 2025" auf Deutsch)
+
+- `llms_txt_generator` - Generiert automatisch llms.txt-Dateien für jeden
+  Blogbeitrag und erstellt KI-freundliche Inhaltszusammenfassungen
+- `auto_related_posts` - Intelligentes Beitragsempfehlungssystem basierend auf
+  Kategorien, Tags und Inhaltsähnlichkeit mit TF-IDF-ähnlichem Algorithmus
+- `category_generator` - Erstellt automatisch dedizierte Seiten für jede
+  Kategorie mit gefilterten Beitragsauflistungen
+- `localized_date` - Liquid-Filter zur Formatierung von Daten entsprechend der
+  ausgewählten Sprache (z.B. "15 January 2025" auf Englisch, "15 gennaio 2025"
+  auf Italienisch, "15 Januar 2025" auf Deutsch)
 
 ### Anpassung
 
@@ -228,7 +261,9 @@ Bearbeiten Sie `css/style.css`, um Farben, Schriftarten und Stile anzupassen.
 
 #### Social Links
 
-Konfigurieren Sie Social Links in `_config.yml` unter `contact.links`. Unterstützte Typen:
+Konfigurieren Sie Social Links in `_config.yml` unter `contact.links`.
+Unterstützte Typen:
+
 - email, linkedin, bluesky, twitter, github, instagram, facebook
 - youtube, mastodon, telegram, whatsapp, medium, reddit
 - discord, tiktok, twitch, slack
@@ -237,12 +272,19 @@ Konfigurieren Sie Social Links in `_config.yml` unter `contact.links`. Unterstü
 
 Ausführliche Dokumentation ist in den folgenden Dateien verfügbar:
 
+- [TABLE_OF_CONTENTS.md](docs/TABLE_OF_CONTENTS.md) - Konfiguration und
+  Anpassung des Inhaltsverzeichnisses
 - [I18N.md](docs/I18N.md) - Internationalisierungssystem und Sprachunterstützung
-- [ACCESSIBILITY.md](docs/ACCESSIBILITY.md) - Barrierefreiheitsfunktionen und Tests
+- [ACCESSIBILITY.md](docs/ACCESSIBILITY.md) - Barrierefreiheitsfunktionen und
+  Tests
 - [SEARCH.md](docs/SEARCH.md) - Suchfunktionalität
 - [READING_PROGRESS.md](docs/READING_PROGRESS.md) - Lesefortschrittsindikator
 - [STRUCTURED_DATA.md](docs/STRUCTURED_DATA.md) - SEO strukturierte Daten
-- [SOCIAL_SHARE.md](SOCIAL_SHARE.md) - Wie man Teilen in sozialen Medien hinzufügt (optional)
+- [JAVASCRIPT_ARCHITECTURE.md](docs/JAVASCRIPT_ARCHITECTURE.md) - Modulare
+  JavaScript-Architektur
+- [SOCIAL_SHARE.md](SOCIAL_SHARE.md) - Wie man Teilen in sozialen Medien
+  hinzufügt (optional)
+- [TESTING.md](docs/TESTING.md) - Leitfaden für Tests und Qualitätssicherung
 - [COMMENTS.md](docs/COMMENTS.md) - Wie man Kommentare hinzufügt (optional)
 - [CHANGELOG.md](CHANGELOG.md) - Versionsverlauf
 - [PUBLISHING.md](PUBLISHING.md) - Anleitung zum Veröffentlichen Ihres Themes
@@ -265,7 +307,9 @@ Ausführliche Dokumentation ist in den folgenden Dateien verfügbar:
 
 ## Beiträge
 
-Beiträge sind willkommen! Bitte reichen Sie gerne einen Pull Request ein. Für größere Änderungen öffnen Sie bitte zuerst ein Issue, um zu besprechen, was Sie ändern möchten.
+Beiträge sind willkommen! Bitte reichen Sie gerne einen Pull Request ein. Für
+größere Änderungen öffnen Sie bitte zuerst ein Issue, um zu besprechen, was Sie
+ändern möchten.
 
 1. Forken Sie das Repository
 2. Erstellen Sie Ihren Feature-Branch (`git checkout -b feature/AmazingFeature`)
@@ -277,12 +321,15 @@ Beiträge sind willkommen! Bitte reichen Sie gerne einen Pull Request ein. Für 
 
 Wenn Sie auf Probleme stoßen oder Fragen haben:
 
-- Öffnen Sie ein Issue auf [GitHub](https://github.com/amargiovanni/sexyjekyll-theme/issues)
-- Überprüfen Sie die [Dokumentation](https://github.com/amargiovanni/sexyjekyll-theme#readme)
+- Öffnen Sie ein Issue auf
+  [GitHub](https://github.com/amargiovanni/sexyjekyll-theme/issues)
+- Überprüfen Sie die
+  [Dokumentation](https://github.com/amargiovanni/sexyjekyll-theme#readme)
 
 ## Lizenz
 
-Dieses Projekt ist unter der MIT-Lizenz lizenziert - siehe die [LICENSE](LICENSE)-Datei für Details.
+Dieses Projekt ist unter der MIT-Lizenz lizenziert - siehe die
+[LICENSE](LICENSE)-Datei für Details.
 
 ## Mitwirkende
 
@@ -296,4 +343,5 @@ Erstellt von [Andrea Margiovanni](https://margiovanni.it)
 
 ---
 
-Wenn Sie dieses Theme nützlich finden, ziehen Sie bitte in Betracht, ihm einen Stern auf GitHub zu geben!
+Wenn Sie dieses Theme nützlich finden, ziehen Sie bitte in Betracht, ihm einen
+Stern auf GitHub zu geben!

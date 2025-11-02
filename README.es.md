@@ -8,7 +8,9 @@
   />
 </a>
 
-Un tema Jekyll moderno y rico en características diseñado para blogs profesionales y sitios web personales. Construido teniendo en cuenta la accesibilidad, el rendimiento y la experiencia del usuario.
+Un tema Jekyll moderno y rico en características diseñado para blogs
+profesionales y sitios web personales. Construido teniendo en cuenta la
+accesibilidad, el rendimiento y la experiencia del usuario.
 
 ![Tema SexyJekyll](assets/screens/1.png)
 
@@ -30,24 +32,35 @@ Un tema Jekyll moderno y rico en características diseñado para blogs profesion
 ## Características
 
 ### Diseño y Experiencia de Usuario
+
 - **Diseño Moderno**: Estética limpia y minimalista
-- **Totalmente Responsivo**: Diseño mobile-first que funciona en todos los dispositivos
-- **Progreso de Lectura**: Indicador visual que muestra el progreso de lectura del artículo
+- **Totalmente Responsivo**: Diseño mobile-first que funciona en todos los
+  dispositivos
+- **Progreso de Lectura**: Indicador visual que muestra el progreso de lectura
+  del artículo
 - **Estilos de Impresión**: Diseños optimizados para imprimir
 
 ### Contenido y Navegación
-- **Búsqueda Avanzada**: Búsqueda instantánea del lado del cliente con resaltado de palabras clave
-- **Publicaciones Relacionadas**: Recomendaciones inteligentes de posts basadas en categorías y etiquetas
+
+- **Búsqueda Avanzada**: Búsqueda instantánea del lado del cliente con resaltado
+  de palabras clave
+- **Tabla de Contenidos**: Generación automática de TOC para artículos de blog
+  con desplazamiento suave
+- **Publicaciones Relacionadas**: Recomendaciones inteligentes de posts basadas
+  en categorías y etiquetas
 - **Categorías**: Filtrado y organización basados en categorías
 - **Paginación**: Paginación de posts personalizable
 
 ### SEO y Redes Sociales
+
 - **Optimizado para SEO**: Meta etiquetas, Open Graph, Twitter Cards
-- **Datos Estructurados**: esquema JSON-LD para mejor comprensión de motores de búsqueda
+- **Datos Estructurados**: esquema JSON-LD para mejor comprensión de motores de
+  búsqueda
 - **Feed RSS**: Generación automática de feed
 - **Sitemap**: Sitemap generado automáticamente para motores de búsqueda
 
 ### Accesibilidad
+
 - **WCAG 2.1 Nivel AA**: Soporte de accesibilidad integral
 - **Saltar al Contenido**: Ayudas de navegación por teclado
 - **HTML Semántico**: Puntos de referencia HTML5 adecuados y estructura
@@ -56,25 +69,39 @@ Un tema Jekyll moderno y rico en características diseñado para blogs profesion
 - **Alto Contraste**: Excelentes relaciones de contraste de color
 
 ### Rendimiento
+
 - **Imágenes Responsivas**: Formato WebP con múltiples tamaños
 - **Carga Perezosa**: Las imágenes se cargan según sea necesario
 - **CSS/JS Optimizados**: Código minificado y eficiente
+- **JavaScript Modular**: Módulos ES6 para mejor mantenibilidad y tree-shaking
 - **Tiempos de Carga Rápidos**: Optimizado para rendimiento
 
 ### Características para Desarrolladores
+
 - **Resaltado de Sintaxis**: Bloques de código con números de línea (Rouge)
 - **Tiempo de Lectura**: Estimación automática del tiempo de lectura
-- **Multiidioma**: Sistema completo de i18n que admite inglés, italiano, alemán, francés y español
+- **Multiidioma**: Sistema completo de i18n que admite inglés, italiano, alemán,
+  francés y español
+- **Arquitectura Modular**: Separación clara de responsabilidades con módulos
+  ES6
+- **Compatible con CSP**: Sin manejadores de eventos inline para mayor seguridad
 - **Personalizable**: Fácil configuración a través de `_config.yml`
 - **Bien Documentado**: Documentación completa incluida
 
 ### Características de IA y LLM
-- **Soporte llms.txt**: Generación automática de resúmenes de contenido amigables con IA
-- **llms.txt por Post**: Cada publicación de blog genera su propio archivo llms.txt dedicado en `/blog/YYYY/MM/DD/post-slug/llms.txt`
-- **llms.txt a Nivel de Sitio**: Archivo llms.txt principal en la raíz con descripción general del sitio y estructura de contenido
-- **Contenido Estructurado**: Marcado HTML5 limpio y semántico optimizado para rastreadores de IA
-- **esquema JSON-LD**: Datos estructurados enriquecidos para mejor comprensión del contenido
-- **Amigable con Rastreadores de IA**: Enfoque acogedor para la indexación de IA con instrucciones claras
+
+- **Soporte llms.txt**: Generación automática de resúmenes de contenido
+  amigables con IA
+- **llms.txt por Post**: Cada publicación de blog genera su propio archivo
+  llms.txt dedicado en `/blog/YYYY/MM/DD/post-slug/llms.txt`
+- **llms.txt a Nivel de Sitio**: Archivo llms.txt principal en la raíz con
+  descripción general del sitio y estructura de contenido
+- **Contenido Estructurado**: Marcado HTML5 limpio y semántico optimizado para
+  rastreadores de IA
+- **esquema JSON-LD**: Datos estructurados enriquecidos para mejor comprensión
+  del contenido
+- **Amigable con Rastreadores de IA**: Enfoque acogedor para la indexación de IA
+  con instrucciones claras
 
 ## Instalación
 
@@ -123,9 +150,9 @@ remote_theme: amargiovanni/sexyjekyll-theme
 title: Tu Nombre
 email: tu.email@ejemplo.com
 description: Descripción de tu sitio
-baseurl: ""
-url: "https://tusitio.com"
-lang: es  # Opciones: en, it, de, fr, es
+baseurl: ''
+url: 'https://tusitio.com'
+lang: es # Opciones: en, it, de, fr, es
 
 # Información del autor
 author:
@@ -136,8 +163,8 @@ author:
 
 # Logo de navegación
 nav_logo:
-  type: text  # 'text' o 'image'
-  text: TN    # Tus iniciales o texto
+  type: text # 'text' o 'image'
+  text: TN # Tus iniciales o texto
   # image: /assets/img/logo.png  # O ruta a la imagen del logo
   # alt: Tu Logo
 
@@ -172,8 +199,8 @@ contact:
 ```markdown
 ---
 layout: post
-title: "Tu Primer Post"
-subtitle: "Subtítulo opcional"
+title: 'Tu Primer Post'
+subtitle: 'Subtítulo opcional'
 date: 2025-11-01
 categories: blog tech
 ---
@@ -207,6 +234,7 @@ bundle exec jekyll serve
 El tema utiliza estos plugins de Jekyll:
 
 **Plugins Estándar:**
+
 - `jekyll-feed` - Generación de feed RSS
 - `jekyll-seo-tag` - Meta etiquetas SEO
 - `jekyll-paginate` - Paginación de posts
@@ -215,10 +243,17 @@ El tema utiliza estos plugins de Jekyll:
 - `jekyll_picture_tag` - Imágenes responsivas
 
 **Plugins Personalizados:**
-- `llms_txt_generator` - Genera automáticamente archivos llms.txt para cada post de blog y crea resúmenes de contenido amigables con IA
-- `auto_related_posts` - Sistema inteligente de recomendación de posts basado en categorías, etiquetas y similitud de contenido usando algoritmo similar a TF-IDF
-- `category_generator` - Crea automáticamente páginas dedicadas para cada categoría con listados de posts filtrados
-- `localized_date` - Filtro Liquid para formatear fechas según el idioma seleccionado (por ejemplo, "15 January 2025" en inglés, "15 gennaio 2025" en italiano, "15 enero 2025" en español)
+
+- `llms_txt_generator` - Genera automáticamente archivos llms.txt para cada post
+  de blog y crea resúmenes de contenido amigables con IA
+- `auto_related_posts` - Sistema inteligente de recomendación de posts basado en
+  categorías, etiquetas y similitud de contenido usando algoritmo similar a
+  TF-IDF
+- `category_generator` - Crea automáticamente páginas dedicadas para cada
+  categoría con listados de posts filtrados
+- `localized_date` - Filtro Liquid para formatear fechas según el idioma
+  seleccionado (por ejemplo, "15 January 2025" en inglés, "15 gennaio 2025" en
+  italiano, "15 enero 2025" en español)
 
 ### Personalización
 
@@ -228,7 +263,9 @@ Edita `css/style.css` para personalizar colores, fuentes y estilos.
 
 #### Enlaces Sociales
 
-Configura los enlaces sociales en `_config.yml` bajo `contact.links`. Tipos soportados:
+Configura los enlaces sociales en `_config.yml` bajo `contact.links`. Tipos
+soportados:
+
 - email, linkedin, bluesky, twitter, github, instagram, facebook
 - youtube, mastodon, telegram, whatsapp, medium, reddit
 - discord, tiktok, twitch, slack
@@ -237,12 +274,20 @@ Configura los enlaces sociales en `_config.yml` bajo `contact.links`. Tipos sopo
 
 La documentación detallada está disponible en los siguientes archivos:
 
+- [TABLE_OF_CONTENTS.md](docs/TABLE_OF_CONTENTS.md) - Configuración y
+  personalización de Tabla de Contenidos
 - [I18N.md](docs/I18N.md) - Sistema de internacionalización y soporte de idiomas
-- [ACCESSIBILITY.md](docs/ACCESSIBILITY.md) - Características de accesibilidad y pruebas
+- [ACCESSIBILITY.md](docs/ACCESSIBILITY.md) - Características de accesibilidad y
+  pruebas
 - [SEARCH.md](docs/SEARCH.md) - Funcionalidad de búsqueda
-- [READING_PROGRESS.md](docs/READING_PROGRESS.md) - Indicador de progreso de lectura
+- [READING_PROGRESS.md](docs/READING_PROGRESS.md) - Indicador de progreso de
+  lectura
 - [STRUCTURED_DATA.md](docs/STRUCTURED_DATA.md) - Datos estructurados SEO
-- [SOCIAL_SHARE.md](SOCIAL_SHARE.md) - Cómo agregar compartición en redes sociales (opcional)
+- [JAVASCRIPT_ARCHITECTURE.md](docs/JAVASCRIPT_ARCHITECTURE.md) - Arquitectura
+  JavaScript modular
+- [SOCIAL_SHARE.md](SOCIAL_SHARE.md) - Cómo agregar compartición en redes
+  sociales (opcional)
+- [TESTING.md](docs/TESTING.md) - Guía de testing y aseguramiento de calidad
 - [COMMENTS.md](docs/COMMENTS.md) - Cómo agregar comentarios (opcional)
 - [CHANGELOG.md](CHANGELOG.md) - Historial de versiones
 - [PUBLISHING.md](PUBLISHING.md) - Guía para publicar tu tema
@@ -265,7 +310,9 @@ La documentación detallada está disponible en los siguientes archivos:
 
 ## Contribuciones
 
-¡Las contribuciones son bienvenidas! Siéntete libre de enviar un Pull Request. Para cambios mayores, abre un issue primero para discutir qué te gustaría cambiar.
+¡Las contribuciones son bienvenidas! Siéntete libre de enviar un Pull Request.
+Para cambios mayores, abre un issue primero para discutir qué te gustaría
+cambiar.
 
 1. Fork el repositorio
 2. Crea tu rama de feature (`git checkout -b feature/CaracterísticaIncreíble`)
@@ -277,12 +324,15 @@ La documentación detallada está disponible en los siguientes archivos:
 
 Si encuentras algún problema o tienes preguntas:
 
-- Abre un issue en [GitHub](https://github.com/amargiovanni/sexyjekyll-theme/issues)
-- Revisa la [documentación](https://github.com/amargiovanni/sexyjekyll-theme#readme)
+- Abre un issue en
+  [GitHub](https://github.com/amargiovanni/sexyjekyll-theme/issues)
+- Revisa la
+  [documentación](https://github.com/amargiovanni/sexyjekyll-theme#readme)
 
 ## Licencia
 
-Este proyecto está licenciado bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) para detalles.
+Este proyecto está licenciado bajo la Licencia MIT - ver el archivo
+[LICENSE](LICENSE) para detalles.
 
 ## Créditos
 
