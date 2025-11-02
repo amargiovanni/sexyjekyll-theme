@@ -29,18 +29,22 @@ module Jekyll
     def generate(site)
       return if site.posts.docs.empty?
 
-      # Extract keywords from all posts
+      # Extract keywords from all posts first
       posts_keywords = {}
       site.posts.docs.each do |post|
         posts_keywords[post] = extract_keywords(post)
+      end
 
-        # Calculate related posts for each post
+      # Then calculate related posts for each post
+      # rubocop:disable Style/CombinableLoops
+      site.posts.docs.each do |post|
         related = calculate_related_posts(post, site.posts.docs, posts_keywords)
 
         # Store in post data for use in templates
         post.data['auto_related_posts'] = related.take(6).map { |r| r[:post] }
         post.data['auto_related_scores'] = related.take(6).map { |r| r[:score] }
       end
+      # rubocop:enable Style/CombinableLoops
     end
 
     private
@@ -126,7 +130,7 @@ module Jekyll
     end
 
     def calculate_keyword_similarity(keywords1, keywords2)
-      return 0 if keywords1.empty? || keywords2.empty?
+      return 0 if keywords1.nil? || keywords2.nil? || keywords1.empty? || keywords2.empty?
 
       # Calculate overlap score
       shared_keywords = keywords1.keys & keywords2.keys
