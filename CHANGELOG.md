@@ -12,20 +12,25 @@ and this project adheres to
 
 ### Added
 
-- **Comprehensive Testing Infrastructure**: Complete test suite for JavaScript and Ruby
+- **Comprehensive Testing Infrastructure**: Complete test suite for JavaScript
+  and Ruby
   - Jest testing framework for JavaScript with ES6 module support
   - 4 test suites with 38 passing tests
-  - Code coverage tracking with 70% minimum threshold (branches, functions, lines, statements)
+  - Code coverage tracking with 70% minimum threshold (branches, functions,
+    lines, statements)
   - RSpec testing framework for Ruby/Jekyll plugins
-  - Test files: `utils.test.js`, `dark-mode.test.js`, `smooth-scroll.test.js`, `external-links.test.js`
-  - Test setup with DOM API mocks (IntersectionObserver, matchMedia, scrollTo, requestAnimationFrame)
+  - Test files: `utils.test.js`, `dark-mode.test.js`, `smooth-scroll.test.js`,
+    `external-links.test.js`
+  - Test setup with DOM API mocks (IntersectionObserver, matchMedia, scrollTo,
+    requestAnimationFrame)
   - Coverage reports with HTML output (`coverage/lcov-report/index.html`)
 - **Code Quality Tools**: Complete linting and formatting infrastructure
   - ESLint configuration for JavaScript with strict quality rules
   - StyleLint configuration for CSS with alphabetical property ordering
   - RuboCop configuration for Ruby code quality
   - Prettier code formatter for consistent code style
-  - Pre-configured npm scripts: `npm run validate`, `npm run lint`, `npm run format`
+  - Pre-configured npm scripts: `npm run validate`, `npm run lint`,
+    `npm run format`
 - **CI/CD Pipeline**: GitHub Actions workflow for automated testing
   - Automated linting on every push and pull request
   - JavaScript and Ruby test execution
@@ -43,7 +48,10 @@ and this project adheres to
 - **JavaScript Architecture**: Refactored monolithic code into ES6 modules
   - Split 731-line `main.js` into 11 focused modules
   - New modular structure in `js/modules/` directory
-  - Modules: `utils.js`, `dark-mode.js`, `smooth-scroll.js`, `navigation.js`, `animated-background.js`, `search.js`, `reading-progress.js`, `table-of-contents.js`, `external-links.js`, `animations.js`, `performance.js`
+  - Modules: `utils.js`, `dark-mode.js`, `smooth-scroll.js`, `navigation.js`,
+    `animated-background.js`, `search.js`, `reading-progress.js`,
+    `table-of-contents.js`, `external-links.js`, `animations.js`,
+    `performance.js`
   - Main.js reduced to 36 lines (import orchestration only)
   - ES6 module loading with `type="module"` in script tags
   - Automatic tree-shaking for unused code elimination
@@ -94,7 +102,8 @@ and this project adheres to
   - `npm run format`: Format all files with Prettier
   - `npm run validate`: Run all quality checks (lint + test + format check)
 - **Documentation**: Enhanced developer documentation
-  - JavaScript architecture guide in `docs/JAVASCRIPT_ARCHITECTURE.md` (600+ lines)
+  - JavaScript architecture guide in `docs/JAVASCRIPT_ARCHITECTURE.md` (600+
+    lines)
   - Module descriptions, benefits, loading strategies
   - Development guidelines and best practices
   - Testing examples and troubleshooting

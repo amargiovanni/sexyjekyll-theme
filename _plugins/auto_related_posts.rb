@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'set'
 
 module Jekyll
@@ -7,19 +9,19 @@ module Jekyll
 
     # Common words to ignore (Italian and English stop words)
     STOP_WORDS = Set.new(%w[
-      il la i le lo gli un una dei delle degli di da in con su per tra fra
-      a e o ma se come quando perché dove chi che cosa cui qual quale
-      questo questa questi queste quello quella quelli quelle
-      essere avere fare dare stare andare venire dire potere dovere volere
-      molto poco più meno anche ancora solo sempre mai già
-      the be to of and a in that have it for not on with he as you do at
-      this but his by from they we say her she or an will my one all would
-      there their what so up out if about who get which go me when make can
-      like time no just him know take people into year your good some could
-      them see other than then now look only come its over think also back
-      after use two how our work first well way even new want because any
-      these give day most us
-    ])
+                           il la i le lo gli un una dei delle degli di da in con su per tra fra
+                           a e o ma se come quando perché dove chi che cosa cui qual quale
+                           questo questa questi queste quello quella quelli quelle
+                           essere avere fare dare stare andare venire dire potere dovere volere
+                           molto poco più meno anche ancora solo sempre mai già
+                           the be to of and that have it for not on with he as you do at
+                           this but his by from they we say her she or an will my one all would
+                           there their what so up out if about who get which go me when make can
+                           like time no just him know take people into year your good some could
+                           them see other than then now look only its over think also back
+                           after use two how our work first well way even new want because any
+                           these give day most us
+                         ])
 
     # Minimum word length to consider
     MIN_WORD_LENGTH = 4
@@ -31,10 +33,8 @@ module Jekyll
       posts_keywords = {}
       site.posts.docs.each do |post|
         posts_keywords[post] = extract_keywords(post)
-      end
 
-      # Calculate related posts for each post
-      site.posts.docs.each do |post|
+        # Calculate related posts for each post
         related = calculate_related_posts(post, site.posts.docs, posts_keywords)
 
         # Store in post data for use in templates
@@ -57,11 +57,11 @@ module Jekyll
 
       # Extract words, clean and filter
       words = text
-        .downcase
-        .gsub(/<[^>]*>/, ' ')  # Remove HTML tags
-        .gsub(/[^a-zàèéìòùäöüß\s]/, ' ')  # Keep only letters (including Italian/German)
-        .split
-        .select { |w| w.length >= MIN_WORD_LENGTH && !STOP_WORDS.include?(w) }
+              .downcase
+              .gsub(/<[^>]*>/, ' ') # Remove HTML tags
+              .gsub(/[^a-zàèéìòùäöüß\s]/, ' ') # Keep only letters (including Italian/German)
+              .split
+              .select { |w| w.length >= MIN_WORD_LENGTH && !STOP_WORDS.include?(w) }
 
       # Count word frequency
       word_freq = Hash.new(0)
@@ -111,14 +111,14 @@ module Jekyll
         score += keyword_score
 
         # Time proximity bonus (recent posts get small boost)
-        days_diff = (current_post.date - other_post.date).abs / 86400
+        days_diff = (current_post.date - other_post.date).abs / 86_400
         if days_diff < 30
           score += 2
         elsif days_diff < 90
           score += 1
         end
 
-        related << { post: other_post, score: score } if score > 0
+        related << { post: other_post, score: score } if score.positive?
       end
 
       # Sort by score descending
@@ -141,10 +141,10 @@ module Jekyll
       end
 
       # Normalize by document lengths
-      magnitude1 = Math.sqrt(keywords1.values.map { |v| v * v }.sum)
-      magnitude2 = Math.sqrt(keywords2.values.map { |v| v * v }.sum)
+      magnitude1 = Math.sqrt(keywords1.values.sum { |v| v * v })
+      magnitude2 = Math.sqrt(keywords2.values.sum { |v| v * v })
 
-      return 0 if magnitude1 == 0 || magnitude2 == 0
+      return 0 if magnitude1.zero? || magnitude2.zero?
 
       # Cosine similarity, scaled to be comparable with category scores
       (score / (magnitude1 * magnitude2)) * 20

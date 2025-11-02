@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Jekyll
   module LocalizedDateFilter
     MONTHS = {
@@ -21,7 +23,7 @@ module Jekyll
         enero febrero marzo abril mayo junio
         julio agosto septiembre octubre noviembre diciembre
       ]
-    }
+    }.freeze
 
     def localized_date(date)
       return date unless date.is_a?(Time) || date.is_a?(Date)

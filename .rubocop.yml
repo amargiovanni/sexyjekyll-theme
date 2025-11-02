@@ -1,10 +1,7 @@
-require:
-  - rubocop-performance
-  - rubocop-rspec
-
 AllCops:
-  TargetRubyVersion: 3.0
   NewCops: enable
+  SuggestExtensions: false
+  TargetRubyVersion: 3.0
   Exclude:
     - 'vendor/**/*'
     - '_site/**/*'
@@ -35,9 +32,27 @@ Metrics/BlockLength:
   Exclude:
     - 'spec/**/*'
     - '_plugins/**/*'
+    - '*.gemspec'
 
 Metrics/MethodLength:
   Max: 20
+  Exclude:
+    - '_plugins/**/*'
+
+Metrics/AbcSize:
+  Exclude:
+    - '_plugins/**/*'
+
+Metrics/CyclomaticComplexity:
+  Exclude:
+    - '_plugins/**/*'
+
+Metrics/PerceivedComplexity:
+  Exclude:
+    - '_plugins/**/*'
+
+# Lint
+Lint/MissingSuper:
   Exclude:
     - '_plugins/**/*'
 
@@ -46,19 +61,15 @@ Naming/FileName:
   Exclude:
     - 'Gemfile'
 
-# Performance
-Performance/Casecmp:
-  Enabled: true
+# Gemspec
+Gemspec/RequiredRubyVersion:
+  Enabled: false
 
-Performance/StringReplacement:
-  Enabled: true
+Gemspec/DevelopmentDependencies:
+  Enabled: false
 
-# RSpec
-RSpec/ExampleLength:
-  Max: 10
+# Style
+Style/GuardClause:
+  Exclude:
+    - '_plugins/**/*'
 
-RSpec/MultipleExpectations:
-  Max: 5
-
-RSpec/NestedGroups:
-  Max: 3

@@ -18,22 +18,19 @@ RSpec.describe Jekyll::CategoryPageGenerator do
   before do
     # Create mock posts with categories
     post1 = instance_double(
-      'Jekyll::Document',
-      data: { 'categories' => ['ruby', 'jekyll'] }
+      Jekyll::Document,
+      data: { 'categories' => %w[ruby jekyll] }
     )
     post2 = instance_double(
-      'Jekyll::Document',
-      data: { 'categories' => ['ruby', 'testing'] }
+      Jekyll::Document,
+      data: { 'categories' => %w[ruby testing] }
     )
     post3 = instance_double(
-      'Jekyll::Document',
+      Jekyll::Document,
       data: { 'categories' => ['javascript'] }
     )
 
-    allow(site).to receive(:posts).and_return(
-      instance_double('Jekyll::Posts', docs: [post1, post2, post3])
-    )
-    allow(site).to receive(:pages).and_return([])
+    allow(site).to receive_messages(posts: instance_double(Jekyll::Posts, docs: [post1, post2, post3]), pages: [])
   end
 
   describe '#generate' do
@@ -51,7 +48,7 @@ RSpec.describe Jekyll::CategoryPageGenerator do
 
       generator.generate(site)
 
-      categories = pages_created.map { |p| p.data['category'] }.compact
+      categories = pages_created.filter_map { |p| p.data['category'] }
       expect(categories).to contain_exactly('ruby', 'jekyll', 'testing', 'javascript')
     end
   end

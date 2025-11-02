@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Jekyll
   class LLMSTxtGenerator < Generator
     safe true
@@ -26,20 +28,20 @@ module Jekyll
       @dir = post.url.chomp('/')
       @name = 'llms.txt'
 
-      self.process(@name)
+      process(@name)
 
       # Initialize data hash and copy post data
       self.data = {}
-      self.data.merge!(post.data)
+      data.merge!(post.data)
 
       # Set the content from the post
       self.content = post.content
 
       # Use the llms layout
-      self.data['layout'] = 'llms'
+      data['layout'] = 'llms'
 
       # Ensure the file is treated as a page to be processed
-      self.data['permalink'] = File.join(post.url, 'llms.txt')
+      data['permalink'] = File.join(post.url, 'llms.txt')
     end
   end
 end

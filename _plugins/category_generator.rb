@@ -1,12 +1,14 @@
+# frozen_string_literal: true
+
 module Jekyll
   class CategoryPageGenerator < Generator
     safe true
 
     def generate(site)
-      if site.layouts.key? 'category'
-        site.categories.each_key do |category|
-          site.pages << CategoryPage.new(site, site.source, category)
-        end
+      return unless site.layouts.key? 'category'
+
+      site.categories.each_key do |category|
+        site.pages << CategoryPage.new(site, site.source, category)
       end
     end
   end
@@ -18,10 +20,10 @@ module Jekyll
       @dir = File.join('categories', category)
       @name = 'index.html'
 
-      self.process(@name)
-      self.read_yaml(File.join(base, '_layouts'), 'category.html')
-      self.data['category'] = category
-      self.data['title'] = "#{category.gsub('-', ' ').capitalize}"
+      process(@name)
+      read_yaml(File.join(base, '_layouts'), 'category.html')
+      data['category'] = category
+      data['title'] = category.tr('-', ' ').capitalize.to_s
     end
   end
 end
