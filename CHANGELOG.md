@@ -7,6 +7,60 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [SexyJekyll Theme]
 
+## [1.2.0] - 2025-11-02
+
+### Fixed
+- **Critical i18n Bug**: Fixed hardcoded language attribute in HTML
+  - Changed `<html lang="it">` to dynamic `<html lang="{{ site.lang | default: 'en' }}">` in `_layouts/default.html`
+  - Site now correctly reflects configured language in HTML metadata
+  - Improves SEO and accessibility for multi-language sites
+- **JavaScript Internationalization**: Removed hardcoded Italian text from JavaScript
+  - Search results messages now use i18n system via data attributes
+  - "Read more" links now localized in search results
+  - "No results" messages properly translated
+  - External link labels now respect site language
+  - Added translations for all 5 supported languages (EN, IT, DE, FR, ES)
+- **Console Logging in Production**: Removed debug output from production builds
+  - Performance monitoring now only logs on localhost/127.0.0.1
+  - Error logging restricted to development environment
+  - Cleaner console output for end users
+  - Production-ready error handling infrastructure in place
+- **HTML Attribute Escaping**: Fixed data attribute escaping issue
+  - Changed from double quotes to single quotes for attributes containing HTML
+  - Prevents rendering of attribute content as visible text
+  - Resolves markup validation issues
+
+### Security
+- **HTTP Security Headers**: Added comprehensive security headers in `_headers` file
+  - `Content-Security-Policy`: Protection against XSS attacks
+  - `Strict-Transport-Security`: HTTPS enforcement with preload directive
+  - `Permissions-Policy`: Restricts browser features (geolocation, camera, microphone, etc.)
+  - Enhanced existing headers (X-Content-Type-Options, X-Frame-Options, Referrer-Policy)
+  - Compliant with OWASP security best practices
+
+### Changed
+- **Inline Event Handlers Removed**: Replaced with CSS hover states
+  - Removed `onmouseover`/`onmouseout` inline handlers from footer Jekyll logo
+  - Added `.footer-jekyll-link` and `.footer-jekyll-logo` CSS classes
+  - Now compatible with strict Content Security Policy
+  - Better separation of concerns (HTML/CSS)
+
+### Performance
+- **HTTP Caching Headers**: Optimized cache strategy
+  - CSS/JS/Assets: 1 year cache with `immutable` directive
+  - HTML: No-cache with `must-revalidate` for fresh content
+  - Reduces bandwidth usage and improves load times
+  - Better CDN compatibility
+
+### Added
+- **Search i18n Translations**: Extended translation system for search functionality
+  - `blog.no_results`: "No results found" message
+  - `blog.no_results_help`: Helper text when no results
+  - `blog.search_results_singular`: Template for single result
+  - `blog.search_results_plural`: Template for multiple results
+  - `blog.external_link_label`: ARIA label for external links
+  - All translations available in EN, IT, DE, FR, ES
+
 ## [1.1.0] - 2025-11-02
 
 ### Changed
@@ -97,6 +151,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **SEO**: Meta tags, Open Graph, Twitter Cards, structured data, canonical URLs
 - **AI-Friendly**: llms.txt generation for posts and site, clean semantic markup for AI crawlers
 
+[1.2.0]: https://github.com/amargiovanni/sexyjekyll-theme/releases/tag/v1.2.0
 [1.1.0]: https://github.com/amargiovanni/sexyjekyll-theme/releases/tag/v1.1.0
 [1.0.1]: https://github.com/amargiovanni/sexyjekyll-theme/releases/tag/v1.0.1
 [1.0.0]: https://github.com/amargiovanni/sexyjekyll-theme/releases/tag/v1.0.0

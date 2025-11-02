@@ -13,7 +13,13 @@ layout: default
         </div>
 
         <!-- Search Box -->
-        <div class="search-container">
+        <div class="search-container"
+             data-i18n-read-more='{{ t.blog.read_more }}'
+             data-i18n-no-results='{{ t.blog.no_results }}'
+             data-i18n-no-results-help='{{ t.blog.no_results_help }}'
+             data-i18n-search-results-singular='{{ t.blog.search_results_singular }}'
+             data-i18n-search-results-plural='{{ t.blog.search_results_plural }}'
+             data-i18n-external-link-label='{{ t.blog.external_link_label }}'>
             <div class="search-wrapper">
                 <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <circle cx="11" cy="11" r="8"></circle>

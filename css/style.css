@@ -696,6 +696,22 @@ section h1 {
   margin: 0;
 }
 
+.footer-jekyll-link {
+  display: inline-block;
+  margin-bottom: var(--spacing-xs);
+}
+
+.footer-jekyll-logo {
+  height: 40px;
+  width: auto;
+  opacity: 0.9;
+  transition: opacity var(--transition-base);
+}
+
+.footer-jekyll-link:hover .footer-jekyll-logo {
+  opacity: 1;
+}
+
 @media (max-width: 768px) {
   .footer-grid {
     grid-template-columns: 1fr;

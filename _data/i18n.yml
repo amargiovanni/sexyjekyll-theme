@@ -28,6 +28,11 @@ en:
     read_more: "Read →"
     previous: "← Previous"
     next: "Next →"
+    no_results: "No results found"
+    no_results_help: "Try different keywords or browse all articles below."
+    search_results_singular: "Found <strong>{count}</strong> result for \"<strong>{query}</strong>\""
+    search_results_plural: "Found <strong>{count}</strong> results for \"<strong>{query}</strong>\""
+    external_link_label: "(opens in a new tab)"
 
   # Post
   post:
@@ -109,6 +114,11 @@ it:
     read_more: "Leggi →"
     previous: "← Precedente"
     next: "Successivo →"
+    no_results: "Nessun risultato trovato"
+    no_results_help: "Prova con parole chiave diverse o sfoglia tutti gli articoli qui sotto."
+    search_results_singular: "Trovato <strong>{count}</strong> risultato per \"<strong>{query}</strong>\""
+    search_results_plural: "Trovati <strong>{count}</strong> risultati per \"<strong>{query}</strong>\""
+    external_link_label: "(si apre in una nuova scheda)"
 
   # Post
   post:
@@ -190,6 +200,11 @@ de:
     read_more: "Weiterlesen →"
     previous: "← Zurück"
     next: "Weiter →"
+    no_results: "Keine Ergebnisse gefunden"
+    no_results_help: "Versuchen Sie es mit anderen Suchbegriffen oder durchsuchen Sie alle Artikel unten."
+    search_results_singular: "<strong>{count}</strong> Ergebnis für \"<strong>{query}</strong>\" gefunden"
+    search_results_plural: "<strong>{count}</strong> Ergebnisse für \"<strong>{query}</strong>\" gefunden"
+    external_link_label: "(öffnet in neuem Tab)"
 
   # Post
   post:
@@ -271,6 +286,11 @@ fr:
     read_more: "Lire →"
     previous: "← Précédent"
     next: "Suivant →"
+    no_results: "Aucun résultat trouvé"
+    no_results_help: "Essayez avec d'autres mots-clés ou parcourez tous les articles ci-dessous."
+    search_results_singular: "<strong>{count}</strong> résultat trouvé pour \"<strong>{query}</strong>\""
+    search_results_plural: "<strong>{count}</strong> résultats trouvés pour \"<strong>{query}</strong>\""
+    external_link_label: "(s'ouvre dans un nouvel onglet)"
 
   # Post
   post:
@@ -352,6 +372,11 @@ es:
     read_more: "Leer →"
     previous: "← Anterior"
     next: "Siguiente →"
+    no_results: "No se encontraron resultados"
+    no_results_help: "Prueba con otras palabras clave o explora todos los artículos a continuación."
+    search_results_singular: "Se encontró <strong>{count}</strong> resultado para \"<strong>{query}</strong>\""
+    search_results_plural: "Se encontraron <strong>{count}</strong> resultados para \"<strong>{query}</strong>\""
+    external_link_label: "(se abre en una nueva pestaña)"
 
   # Post
   post:

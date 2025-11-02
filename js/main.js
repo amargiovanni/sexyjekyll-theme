@@ -142,34 +142,40 @@ function throttle(func, limit) {
 // Performance Monitoring
 // =======================
 
-// Log performance metrics (optional, for development)
-if (window.performance && console.debug) {
-  window.addEventListener('load', () => {
-    const perfData = window.performance.timing;
-    const pageLoadTime = perfData.loadEventEnd - perfData.navigationStart;
-    const connectTime = perfData.responseEnd - perfData.requestStart;
-    const renderTime = perfData.domComplete - perfData.domLoading;
+// Log performance metrics only in development mode
+if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+  if (window.performance && console.debug) {
+    window.addEventListener('load', () => {
+      const perfData = window.performance.timing;
+      const pageLoadTime = perfData.loadEventEnd - perfData.navigationStart;
+      const connectTime = perfData.responseEnd - perfData.requestStart;
+      const renderTime = perfData.domComplete - perfData.domLoading;
 
-    console.debug('Page Load Time:', pageLoadTime + 'ms');
-    console.debug('Connect Time:', connectTime + 'ms');
-    console.debug('Render Time:', renderTime + 'ms');
-  });
+      console.debug('Page Load Time:', pageLoadTime + 'ms');
+      console.debug('Connect Time:', connectTime + 'ms');
+      console.debug('Render Time:', renderTime + 'ms');
+    });
+  }
 }
 
 // =======================
 // Error Handling
 // =======================
 
-// Global error handler
+// Global error handler (only log in development, report in production)
 window.addEventListener('error', (event) => {
-  console.error('Global error:', event.error);
-  // You can add error reporting service here (e.g., Sentry)
+  if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+    console.error('Global error:', event.error);
+  }
+  // You can add error reporting service here (e.g., Sentry) for production
 });
 
 // Handle unhandled promise rejections
 window.addEventListener('unhandledrejection', (event) => {
-  console.error('Unhandled promise rejection:', event.reason);
-  // You can add error reporting service here
+  if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+    console.error('Unhandled promise rejection:', event.reason);
+  }
+  // You can add error reporting service here for production
 });
 
 // =======================
@@ -234,6 +240,17 @@ function initSearch() {
   // Only initialize if we're on a page with search
   if (!searchInput) return;
 
+  // Get i18n translations from data attributes
+  const searchContainer = document.querySelector('.search-container');
+  const i18n = {
+    readMore: searchContainer?.dataset.i18nReadMore || 'Read →',
+    noResults: searchContainer?.dataset.i18nNoResults || 'No results found',
+    noResultsHelp: searchContainer?.dataset.i18nNoResultsHelp || 'Try different keywords or browse all articles below.',
+    searchResultsSingular: searchContainer?.dataset.i18nSearchResultsSingular || 'Found <strong>{count}</strong> result for "<strong>{query}</strong>"',
+    searchResultsPlural: searchContainer?.dataset.i18nSearchResultsPlural || 'Found <strong>{count}</strong> results for "<strong>{query}</strong>"',
+    externalLinkLabel: searchContainer?.dataset.i18nExternalLinkLabel || '(opens in a new tab)'
+  };
+
   // Load Simple Jekyll Search library
   const script = document.createElement('script');
   script.src = '/js/simple-jekyll-search.min.js';
@@ -255,15 +272,15 @@ function initSearch() {
               <div class="post-categories">
                 <span class="post-category">{category}</span>
               </div>
-              <a href="{url}" class="read-more">Leggi →</a>
+              <a href="{url}" class="read-more">${i18n.readMore}</a>
             </div>
           </div>
         </article>
       `,
       noResultsText: `
         <div class="search-no-results">
-          <h3>Nessun risultato trovato</h3>
-          <p>Prova con parole chiave diverse o sfoglia tutti gli articoli qui sotto.</p>
+          <h3>${i18n.noResults}</h3>
+          <p>${i18n.noResultsHelp}</p>
         </div>
       `,
       limit: 20,
@@ -291,7 +308,10 @@ function initSearch() {
         const resultCount = searchResults.children.length;
         if (resultCount > 0 && !searchResults.querySelector('.search-no-results')) {
           searchResultsCount.style.display = 'block';
-          searchResultsCount.innerHTML = `Trovat${resultCount !== 1 ? 'i' : 'o'} <strong>${resultCount}</strong> risultat${resultCount !== 1 ? 'i' : 'o'} per "<strong>${escapeHtml(query)}</strong>"`;
+          const template = resultCount === 1 ? i18n.searchResultsSingular : i18n.searchResultsPlural;
+          searchResultsCount.innerHTML = template
+            .replace('{count}', resultCount)
+            .replace('{query}', escapeHtml(query));
         } else {
           searchResultsCount.style.display = 'none';
         }
@@ -550,6 +570,10 @@ function initExternalLinks() {
   const postContent = document.querySelector('.post-content');
   if (!postContent) return;
 
+  // Get i18n translation from data attribute
+  const searchContainer = document.querySelector('.search-container');
+  const externalLinkLabel = searchContainer?.dataset.i18nExternalLinkLabel || '(opens in a new tab)';
+
   const links = postContent.querySelectorAll('a[href]');
 
   links.forEach(link => {
@@ -570,7 +594,7 @@ function initExternalLinks() {
         if (!link.querySelector('.external-link-icon')) {
           const icon = document.createElement('span');
           icon.className = 'external-link-icon';
-          icon.setAttribute('aria-label', '(si apre in una nuova scheda)');
+          icon.setAttribute('aria-label', externalLinkLabel);
           icon.innerHTML = '↗';
           link.appendChild(icon);
         }
