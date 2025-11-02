@@ -1,5 +1,13 @@
 # SexyJekyll Theme
 
+<a href="https://jekyll-themes.com/amargiovanni/sexyjekyll-theme">
+  <img
+    src="https://img.shields.io/badge/featured%20on-JT-red.svg"
+    height="20"
+    alt="Jekyll Themes Shield"
+  />
+</a>
+
 Ein modernes, funktionsreiches Jekyll-Theme, das für professionelle Blogs und persönliche Websites entwickelt wurde. Gebaut mit Fokus auf Barrierefreiheit, Leistung und Benutzererfahrung.
 
 ![SexyJekyll Theme](screenshot.png)
