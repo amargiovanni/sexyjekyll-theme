@@ -244,7 +244,7 @@ describe('initSearch', () => {
     }, 450);
   });
 
-  test('should clear search on empty input', () => {
+  test('should clear search on empty input', (done) => {
     initSearch();
 
     const mockEvent = { target: { value: '' } };
@@ -252,10 +252,12 @@ describe('initSearch', () => {
       inputHandler(mockEvent);
     }
 
+    // Wait for debounce (300ms) + a bit more
     setTimeout(() => {
       expect(mockSearchClear.style.display).toBe('none');
       expect(mockSearchResults.style.display).toBe('none');
       expect(mockRegularPosts.style.display).toBe('grid');
+      done();
     }, 350);
   });
 

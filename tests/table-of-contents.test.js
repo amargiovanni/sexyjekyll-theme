@@ -375,6 +375,8 @@ describe('initTableOfContents', () => {
           },
           remove: function () {},
         },
+        getBoundingClientRect: () => ({ top: 100, bottom: 150 }),
+        scrollIntoView: function () {},
       };
       tocLinks.push(link);
       return link;
@@ -408,6 +410,8 @@ describe('initTableOfContents', () => {
 
     mockTocList.querySelector = () => ({
       classList: { add: function () {}, remove: function () {} },
+      getBoundingClientRect: () => ({ top: 100, bottom: 150 }),
+      scrollIntoView: function () {},
     });
     mockTocList.querySelectorAll = () => tocLinks;
 
