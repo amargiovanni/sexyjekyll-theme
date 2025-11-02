@@ -27,8 +27,8 @@ _site/
 node_modules/
 npm-debug.log
 yarn-error.log
-package-lock.json
-yarn.lock
+# package-lock.json should be committed for reproducible builds
+# yarn.lock can be ignored if using npm
 
 # Testing
 coverage/
