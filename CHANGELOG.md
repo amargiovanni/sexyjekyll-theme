@@ -15,15 +15,21 @@ and this project adheres to
 - **Comprehensive Testing Infrastructure**: Complete test suite for JavaScript
   and Ruby
   - Jest testing framework for JavaScript with ES6 module support
-  - 4 test suites with 38 passing tests
+  - 11 test suites with 137 passing tests
   - Code coverage tracking with 70% minimum threshold (branches, functions,
     lines, statements)
+  - Achieved 98.31% statement coverage, 87.75% branch coverage, 95.31% function
+    coverage, 98.28% line coverage
   - RSpec testing framework for Ruby/Jekyll plugins
-  - Test files: `utils.test.js`, `dark-mode.test.js`, `smooth-scroll.test.js`,
-    `external-links.test.js`
+  - 13 Ruby plugin tests (5 for CategoryPageGenerator, 8 for LocalizedDateFilter)
+  - Test files: `animations.test.js`, `search.test.js`,
+    `table-of-contents.test.js`, `reading-progress.test.js`, `performance.test.js`,
+    `navigation.test.js`, `animated-background.test.js`, `utils.test.js`,
+    `dark-mode.test.js`, `smooth-scroll.test.js`, `external-links.test.js`
   - Test setup with DOM API mocks (IntersectionObserver, matchMedia, scrollTo,
-    requestAnimationFrame)
+    requestAnimationFrame, getBoundingClientRect)
   - Coverage reports with HTML output (`coverage/lcov-report/index.html`)
+  - Ruby plugin tests with proper mocking (layouts, read_yaml, site categories)
 - **Code Quality Tools**: Complete linting and formatting infrastructure
   - ESLint configuration for JavaScript with strict quality rules
   - StyleLint configuration for CSS with alphabetical property ordering
@@ -34,9 +40,11 @@ and this project adheres to
 - **CI/CD Pipeline**: GitHub Actions workflow for automated testing
   - Automated linting on every push and pull request
   - JavaScript and Ruby test execution
-  - Jekyll build verification
+  - Jekyll build verification with libvips support
   - Multi-job pipeline: Lint → Test → Build
   - Configuration file: `.github/workflows/ci.yml`
+  - Updated to actions/upload-artifact@v4 and codecov/codecov-action@v4
+  - Codecov integration for JavaScript coverage tracking
 - **Testing Documentation**: Comprehensive testing guides
   - Full testing guide in `docs/TESTING.md` (600+ lines)
   - Quick reference guide in `TESTING_README.md`
@@ -82,6 +90,40 @@ and this project adheres to
   - Prettier formatting applied to all JavaScript, CSS, and Markdown files
   - Print width: 100 characters, 2-space indentation
   - Single quotes, ES5 trailing commas, LF line endings
+- **RuboCop Configuration**: Fixed deprecated configuration syntax
+  - Removed deprecated `require:` syntax in `.rubocop.yml`
+  - Added `SuggestExtensions: false` to suppress extension warnings
+  - Added proper excludes for plugins, specs, and gemspec files
+  - Auto-corrected 215 Ruby style offenses
+  - Added frozen_string_literal pragmas to all Ruby plugin files
+- **RSpec Tests**: Fixed failing Ruby plugin tests
+  - Fixed `LocalizedDateFilter` constant reference (was `LocalizedDate`)
+  - Properly configured Liquid::Context with site registers
+  - Fixed expected date formats for English locale
+  - Added fallback for unsupported locales in `localized_date.rb`
+  - Fixed `Jekyll::Posts` constant error using generic doubles
+  - Fixed CategoryPageGenerator tests with proper mocking (layouts, read_yaml,
+    categories)
+  - Disabled plugin loading in test configuration to avoid jekyll_picture_tag
+    dependency
+- **Jest Tests**: Fixed 7 failing tests in GitHub Actions CI
+  - Fixed animations.test.js footer animation test (mock object identity issues)
+  - Fixed animations.test.js variable shadowing (mockElements vs
+    mockContentElements)
+  - Added getBoundingClientRect mocks to table-of-contents.test.js
+  - Fixed search.test.js async timing issues with done() callbacks
+- **Auto Related Posts Plugin**: Fixed nil pointer error in keyword similarity
+  - Added nil check before calling `empty?` on keywords
+  - Split keyword extraction and related posts calculation into two phases
+  - Prevents accessing uninitialized keywords during calculation
+  - Added RuboCop disable comment for intentionally separated loops
+- **GitHub Actions**: Fixed deprecated action versions
+  - Updated actions/upload-artifact from v3 to v4
+  - Updated codecov/codecov-action from v3 to v4
+  - Added libvips-dev installation for jekyll_picture_tag support
+- **Git Configuration**: Fixed package-lock.json exclusion
+  - Removed package-lock.json from .gitignore for reproducible builds
+  - Ensures consistent dependency versions in CI/CD pipeline
 
 ### Performance
 
