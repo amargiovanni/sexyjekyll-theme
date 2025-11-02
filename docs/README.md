@@ -13,6 +13,33 @@ This folder contains technical documentation for the SexyJekyll theme.
   - Using translations in templates
   - Date localization
 
+- **[TABLE_OF_CONTENTS.md](TABLE_OF_CONTENTS.md)** - Table of Contents system
+  - Automatic TOC generation
+  - Configuration and customization
+  - Smooth scrolling navigation
+
+### Development & Quality
+
+- **[JAVASCRIPT_ARCHITECTURE.md](JAVASCRIPT_ARCHITECTURE.md)** - JavaScript
+  modular architecture
+  - ES6 module system
+  - Module organization
+  - Benefits and best practices
+  - Development guidelines
+
+- **[TESTING.md](TESTING.md)** - Testing and quality assurance
+  - Jest testing framework for JavaScript
+  - RSpec testing for Ruby plugins
+  - Code coverage requirements (70%+)
+  - Running tests locally and in CI/CD
+  - Test writing guidelines
+
+- **[GIT_HOOKS.md](GIT_HOOKS.md)** - Automated quality checks with Git hooks
+  - Pre-commit hook (lint-staged, tests)
+  - Pre-push hook (full validation)
+  - Preventing broken code from being pushed
+  - Configuration and troubleshooting
+
 ### Features
 
 - **[ACCESSIBILITY.md](ACCESSIBILITY.md)** - Accessibility features and WCAG
@@ -41,6 +68,26 @@ This folder contains technical documentation for the SexyJekyll theme.
 - **[COMMENTS.md](COMMENTS.md)** - How to add comments to your blog
   - Integration with comment systems
   - Setup instructions for popular platforms
+
+- **[SOCIAL_SHARE.md](../SOCIAL_SHARE.md)** - Social media sharing (optional)
+  - How to add social sharing buttons
+  - Configuration options
+
+### Project Information
+
+- **[CHANGELOG.md](../CHANGELOG.md)** - Version history and release notes
+  - All notable changes to the project
+  - Version migration guides
+  - Bug fixes and new features
+
+- **[PUBLISHING.md](../PUBLISHING.md)** - Guide to publish your theme
+  - How to package and distribute your theme
+  - RubyGems.org publishing
+  - Jekyll theme gem creation
+
+- **[TESTING_README.md](../TESTING_README.md)** - Quick testing reference
+  - Common test commands
+  - Quick troubleshooting guide
 
 ## Main Documentation
 
