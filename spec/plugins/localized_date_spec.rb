@@ -8,7 +8,8 @@ RSpec.describe Jekyll::LocalizedDateFilter do
     Jekyll::Site.new(
       Jekyll.configuration(
         'source' => File.expand_path('../..', __dir__),
-        'lang' => 'en'
+        'lang' => 'en',
+        'plugins' => []
       )
     )
   end

@@ -3,13 +3,13 @@
 require 'spec_helper'
 require_relative '../../_plugins/category_generator'
 
-# Skip these tests - they require category layout file to be present
-RSpec.describe Jekyll::CategoryPageGenerator, skip: 'Requires category layout file' do
+RSpec.describe Jekyll::CategoryPageGenerator do
   let(:site) do
     Jekyll::Site.new(
       Jekyll.configuration(
         'source' => File.expand_path('../..', __dir__),
-        'lang' => 'en'
+        'lang' => 'en',
+        'plugins' => []
       )
     )
   end
@@ -17,6 +17,15 @@ RSpec.describe Jekyll::CategoryPageGenerator, skip: 'Requires category layout fi
   let(:generator) { described_class.new }
 
   before do
+    # Mock the layouts to include 'category' layout
+    allow(site).to receive(:layouts).and_return({ 'category' => double('layout') })
+
+    # Mock read_yaml method for CategoryPage instances to avoid file system access
+    allow_any_instance_of(Jekyll::CategoryPage).to receive(:read_yaml) do |instance|
+      instance.data ||= {}
+      instance.data['layout'] = 'category'
+    end
+
     # Create mock posts with categories
     post1 = instance_double(
       Jekyll::Document,
@@ -31,7 +40,19 @@ RSpec.describe Jekyll::CategoryPageGenerator, skip: 'Requires category layout fi
       data: { 'categories' => ['javascript'] }
     )
 
-    allow(site).to receive_messages(posts: double('posts', docs: [post1, post2, post3]), pages: [])
+    # Mock categories hash - Jekyll builds this from posts
+    categories_hash = {
+      'ruby' => [post1, post2],
+      'jekyll' => [post1],
+      'testing' => [post2],
+      'javascript' => [post3]
+    }
+
+    allow(site).to receive_messages(
+      posts: double('posts', docs: [post1, post2, post3]),
+      pages: [],
+      categories: categories_hash
+    )
   end
 
   describe '#generate' do
@@ -66,8 +87,8 @@ RSpec.describe Jekyll::CategoryPageGenerator, skip: 'Requires category layout fi
       expect(category_page.data['category']).to eq('ruby')
     end
 
-    it 'generates correct permalink' do
-      expect(category_page.data['permalink']).to eq('/categories/ruby/')
+    it 'generates correct directory path' do
+      expect(category_page.instance_variable_get(:@dir)).to eq('categories/ruby')
     end
   end
 end
