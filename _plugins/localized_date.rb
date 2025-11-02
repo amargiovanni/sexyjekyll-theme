@@ -31,6 +31,9 @@ module Jekyll
       # Get the site language from Jekyll config, default to 'en'
       lang = @context.registers[:site].config['lang'] || 'en'
 
+      # Fall back to English if language is not supported
+      lang = 'en' unless MONTHS.key?(lang)
+
       day = date.day
       month = MONTHS[lang][date.month - 1]
       year = date.year
