@@ -198,6 +198,10 @@ Documentazione dettagliata disponibile in:
 - [I18N.md](docs/I18N.md) - Sistema di internazionalizzazione e supporto lingue
 - [ACCESSIBILITY.md](docs/ACCESSIBILITY.md) - Funzionalità di accessibilità
 - [TESTING.md](docs/TESTING.md) - Guida testing e quality assurance
+- [GIT_HOOKS.md](docs/GIT_HOOKS.md) - Controlli di qualità automatici con Git
+  hooks
+- [JAVASCRIPT_ARCHITECTURE.md](docs/JAVASCRIPT_ARCHITECTURE.md) - Architettura
+  modulare JavaScript
 - [SEARCH.md](docs/SEARCH.md) - Funzionalità di ricerca
 - [READING_PROGRESS.md](docs/READING_PROGRESS.md) - Indicatore progresso lettura
 - [STRUCTURED_DATA.md](docs/STRUCTURED_DATA.md) - Dati strutturati SEO

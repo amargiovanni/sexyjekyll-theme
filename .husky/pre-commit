@@ -1,0 +1,14 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# Run lint-staged for staged files
+npx lint-staged
+
+# Run all tests
+npm test
+
+# Run RSpec tests if Ruby files were changed
+if git diff --cached --name-only | grep -qE '\.(rb)$'; then
+  echo "Ruby files changed, running RSpec..."
+  bundle exec rspec
+fi

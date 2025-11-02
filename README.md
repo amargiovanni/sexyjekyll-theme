@@ -285,6 +285,9 @@ Detailed documentation is available in the following files:
 - [STRUCTURED_DATA.md](docs/STRUCTURED_DATA.md) - SEO structured data
 - [SOCIAL_SHARE.md](SOCIAL_SHARE.md) - How to add social sharing (optional)
 - [TESTING.md](docs/TESTING.md) - Testing and quality assurance guide
+- [GIT_HOOKS.md](docs/GIT_HOOKS.md) - Automated quality checks with Git hooks
+- [JAVASCRIPT_ARCHITECTURE.md](docs/JAVASCRIPT_ARCHITECTURE.md) - JavaScript
+  modular architecture
 - [COMMENTS.md](docs/COMMENTS.md) - How to add comments (optional)
 - [CHANGELOG.md](CHANGELOG.md) - Version history
 - [PUBLISHING.md](PUBLISHING.md) - Guide to publish your theme

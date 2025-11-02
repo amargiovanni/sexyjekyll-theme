@@ -287,11 +287,13 @@ Une documentation détaillée est disponible dans les fichiers suivants :
 - [READING_PROGRESS.md](docs/READING_PROGRESS.md) - Indicateur de progression de
   lecture
 - [STRUCTURED_DATA.md](docs/STRUCTURED_DATA.md) - Données structurées SEO
+- [TESTING.md](docs/TESTING.md) - Guide des tests et de l assurance qualité
+- [GIT_HOOKS.md](docs/GIT_HOOKS.md) - Contrôles de qualité automatiques avec Git
+  hooks
 - [JAVASCRIPT_ARCHITECTURE.md](docs/JAVASCRIPT_ARCHITECTURE.md) - Architecture
   JavaScript modulaire
 - [SOCIAL_SHARE.md](SOCIAL_SHARE.md) - Comment ajouter le partage social
   (optionnel)
-- [TESTING.md](docs/TESTING.md) - Guide des tests et de l assurance qualité
 - [COMMENTS.md](docs/COMMENTS.md) - Comment ajouter des commentaires (optionnel)
 - [CHANGELOG.md](CHANGELOG.md) - Historique des versions
 - [PUBLISHING.md](PUBLISHING.md) - Guide pour publier votre thème

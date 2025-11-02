@@ -52,6 +52,13 @@ and this project adheres to
   - Quick reference guide in `TESTING_README.md`
   - Coverage reports and troubleshooting information
   - Best practices for writing tests
+- **Git Hooks**: Automated quality checks with Husky
+  - Pre-commit hook: lint-staged + Jest tests + RSpec (if Ruby files changed)
+  - Pre-push hook: Full validation (lint + test + format + RuboCop + RSpec +
+    Jekyll build)
+  - Automatic code fixing and formatting on commit
+  - Prevents pushing broken code to repository
+  - Configuration in `.husky/` directory with documentation
 
 ### Changed
 

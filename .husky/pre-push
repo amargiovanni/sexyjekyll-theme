@@ -1,0 +1,21 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+echo "Running full validation before push..."
+
+# Run npm validate (lint + test + format:check)
+npm run validate
+
+# Run RuboCop
+echo "Running RuboCop..."
+bundle exec rubocop
+
+# Run RSpec
+echo "Running RSpec..."
+bundle exec rspec
+
+# Try to build Jekyll site
+echo "Building Jekyll site..."
+bundle exec jekyll build --trace
+
+echo "✅ All checks passed! Ready to push."

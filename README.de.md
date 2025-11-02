@@ -280,11 +280,13 @@ Ausführliche Dokumentation ist in den folgenden Dateien verfügbar:
 - [SEARCH.md](docs/SEARCH.md) - Suchfunktionalität
 - [READING_PROGRESS.md](docs/READING_PROGRESS.md) - Lesefortschrittsindikator
 - [STRUCTURED_DATA.md](docs/STRUCTURED_DATA.md) - SEO strukturierte Daten
+- [TESTING.md](docs/TESTING.md) - Leitfaden für Tests und Qualitätssicherung
+- [GIT_HOOKS.md](docs/GIT_HOOKS.md) - Automatische Qualitätsprüfungen mit Git
+  Hooks
 - [JAVASCRIPT_ARCHITECTURE.md](docs/JAVASCRIPT_ARCHITECTURE.md) - Modulare
   JavaScript-Architektur
 - [SOCIAL_SHARE.md](SOCIAL_SHARE.md) - Wie man Teilen in sozialen Medien
   hinzufügt (optional)
-- [TESTING.md](docs/TESTING.md) - Leitfaden für Tests und Qualitätssicherung
 - [COMMENTS.md](docs/COMMENTS.md) - Wie man Kommentare hinzufügt (optional)
 - [CHANGELOG.md](CHANGELOG.md) - Versionsverlauf
 - [PUBLISHING.md](PUBLISHING.md) - Anleitung zum Veröffentlichen Ihres Themes
