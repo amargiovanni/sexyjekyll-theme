@@ -10,7 +10,22 @@
 
 Un thème Jekyll moderne et riche en fonctionnalités, conçu pour les blogs professionnels et les sites personnels. Construit en gardant à l'esprit l'accessibilité, les performances et l'expérience utilisateur.
 
-![Thème SexyJekyll](screenshot.png)
+![Thème SexyJekyll](assets/screens/1.png)
+
+<div align="center">
+  <table>
+    <tr>
+      <td width="33%"><img src="assets/screens/2.png" alt="Feature 2"/></td>
+      <td width="33%"><img src="assets/screens/3.png" alt="Feature 3"/></td>
+      <td width="33%"><img src="assets/screens/4.png" alt="Feature 4"/></td>
+    </tr>
+    <tr>
+      <td width="33%"><img src="assets/screens/5.png" alt="Feature 5"/></td>
+      <td width="33%"><img src="assets/screens/6.png" alt="Feature 6"/></td>
+      <td width="33%"><img src="assets/screens/7.png" alt="Feature 7"/></td>
+    </tr>
+  </table>
+</div>
 
 ## Fonctionnalités
 
